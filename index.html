@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Hackerstellar 2022</title>
+  <meta name="description" content="24 hour hackathon @ KJSCE Vidyavihar">
+  <meta name="keywords" content="Hack, HackIt, TechNext, Hackathon, CSI, KJSCE">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#201E5C">
+  <!-- <link rel="shortcut icon" ./favicon.ico" /> -->
+
+  <!-- Google site verif -->
+  <meta name="google-site-verification" content="uGQ5sqadq9-6SPyKFrrOm_N5oys-xoJ7sSBKjw6LCI4" />
+
+  <!-- Open Graph data (Facebook) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/favicon.ico" rel="apple-touch-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main_mainpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main2.css">
+  <link rel="stylesheet" type="text/css" href="./css/faq.scss">
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2430237730636491');
+    fbq('track', 'PageView');
+  </script>
+
+
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2430237730636491&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <style>
+    .containercsi {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Make the image responsive */
+    .containercsi img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* this for the two toggle buttons in schedule*/
+    #day-toggle-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0;
+    }
+
+    .daytogglebuttons {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .containercsi .csi {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-75%, -75%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(255, 0, 149);
+      color: white;
+      font-size: 16px;
+      padding: 15px 32px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .containercsi .csi:hover {
+      /* background-color: rgb(0, 255, 255); */
+      background-color: #1A063A
+    }
+
+    .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+
+    .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .embed-responsive-10by3 {
+      padding-top: 30%;
+    }
+
+    .lastattempt {
+      /* width:400px;  */
+      width: 450px;
+      height: 450px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .lastattempt {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .a123map-responsive {
+      overflow: hidden;
+      padding-bottom: 50%;
+      position: relative;
+      height: 0;
+    }
+
+    .a123map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    .map-container-2 {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+
+    .map-container-2 iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    @font-face {
+      font-family: fibra_light;
+      src: url('fonts/Los Andes - Fibra Light.otf');
+    }
+
+    h1,
+    h2,
+    h4,
+    p,
+    a,
+    span {
+      font-family: fibra_light;
+    }
+  </style>
+</head>
+
+<body style="background-color: #1A063A">
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-custom makebgblue ">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="https://csikjsce.org/index.html" target="_blank" rel="noopener noreferrer">
+        <div class="logo-image navbar-custom">
+          <img src="img/CSIlogo.png" class="img-fluid">
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end ">
+          <li class="nav-item navbar-text">
+            <a class="nav-link" href="#" id="about-nav" style="opacity: 1;">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="domains-nav" style="opacity: 1;">Domains</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="preevent-nav" style="opacity: 1;">Pre-Events</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="faq-nav" style="opacity: 1;">FAQ</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="map-nav" style="opacity: 1;">Map</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="sponsors-nav" style="opacity: 1;">Sponsors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- </nav> -->
+  </nav>
+
+
+  <article>
+    <div class="containercsi">
+      <img class="containercsi" src="img/hackerbash.gif">
+      <!-- <button id="devfolio-apply-now">  -->
+      <!-- 
+        Apply with Devfolio
+      </button> -->
+
+    </div>
+  </article>
+
+
+
+  <!-- Registration -->
+  <article class="body">
+
+    <!-- <div class="container"> -->
+    <section class="intro intro-gradient hackitbox" id="timer">
+      <!-- <div class="container devfolio-button" style="display:grid;justify-content:center; margin-bottom:20px">
+        <div class="apply-button" data-hackathon-slug="hackerbash" data-button-theme="light"
+          style="height: 44px; width: 312px;">
+        </div>
+      </div> -->
+
+      <style>
+        #timer .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #timer .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #timer .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #timer .segment-img-container {
+          position: relative;
+          top: -25px;
+          width: 180px;
+          height: 180px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #timer a {
+          padding: 15px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: 10vw;
+            width: 35vw;
+            height: 35vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #timer .segment-img {
+          width: 80%;
+          height: 80%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #timer .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+        }
+
+        #timer .card-text {
+          text-align: center;
+        }
+
+        #timer .card-block {
+          padding: 0 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #fff;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #timer .card-block ul li {
+          font-size: x-large;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 50px;
+        }
+
+        @media (max-width: 600px) {
+          #timer .card-block {
+            height: 400px;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="heading" style="text-align: center; margin-top: 3%;">
+          <h1 style="font-size:xx-large">Registerations have been closed. Thank You for registering!</h1>
+        </div>
+        <!-- <div class="card" style=" margin:0 auto;">
+          <div class="card-block h350"
+            style="height: 200px; border-top-left-radius: 30px; border-top-right-radius: 30px;text-align: center;padding: 53px;display: flex;flex-wrap: nowrap;">
+            <div class="flex-col-c-m wsize2 m-b-20" style="display: inline-block;">
+              <span class="l1-txt2 p-b-4 days" style="font-family: fibra_light;display: inline-block; width: 100%;"
+                id="countdays"></span>
+              <span class="m2-txt2" style="font-family: fibra_light;display: inline-block;">Days</span>
+            </div>
+
+            <span class="l1-txt2 p-b-22" style="font-family: fibra_light;display: inline-block;">:</span>
+
+            <div class="flex-col-c-m wsize2 m-b-20" style="display: inline-block;">
+              <span class="l1-txt2 p-b-4 hours"
+                style="font-family: fibra_light;display: inline-block; width: fit-content;" id="counthours"></span>
+              <span class="m2-txt2" style="font-family: fibra_light;display: inline-block;">Hours</span>
+            </div>
+
+            <span class="l1-txt2 p-b-22 " style="font-family: fibra_light;display: inline-block;">:</span>
+
+            <div class="flex-col-c-m wsize2 m-b-20" style="display: inline-block;">
+              <span class="l1-txt2 p-b-4 minutes" style="font-family: fibra_light;display: inline-block; width: 100%;"
+                id="countminutes"></span>
+              <span class="m2-txt2" style="font-family: fibra_light;display: inline-block;">Minutes</span>
+            </div>
+
+            <span class="l1-txt2 p-b-22">:</span>
+
+            <div class="flex-col-c-m wsize2 m-b-20" style="display: inline-block;">
+              <span class="l1-txt2 p-b-4 seconds" style="font-family: fibra_light;display: inline-block; width: 100%;"
+                id="countseconds"></span>
+              <span class="m2-txt2" style="font-family: fibra_light;display: inline-block;">Seconds</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <script>
+        var registration_end_date = new Date("Feb 24, 2021 23:59:59").getTime();
+        var x = setInterval(function () {
+          var now = new Date().getTime();
+          var difference = registration_end_date - now;
+          var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+          if(days ==0 && hours ==0 && minutes==0 && seconds == 0) {
+            days = 0;
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+          }
+
+          document.getElementById("countdays").innerHTML = days;
+          document.getElementById("counthours").innerHTML = hours;
+          document.getElementById("countminutes").innerHTML = minutes;
+          document.getElementById("countseconds").innerHTML = seconds;
+        });
+      </script> -->
+      <br><br>
+      <div class="container" id="about">
+        <div class="hackitbox">
+          <!-- class="text-container round-frame" -->
+          <div class="heading">
+            <h1> What is HackerBash?</h1>
+
+            <p style="text-align: justify; opacity: 1;">Computer Society of India - a students' chapter of the K.J.
+              Somaiya College of Engineering proudly introduces HackerBash, as a part of our annual flagship council
+              tech event called TechNext. For an incredible 24 hours, you will work together with your teams to envision
+              and develop the technology of tomorrow for solving the problems of today. It is a plethora of
+              opportunities for tech savvies to boost their skills, capitalize on tech trends, both new and old, and get
+              their talent acquainted and appreciated by experts from the industry. The amalgamation of unique domains
+              belonging to different areas of tech gives you a wide range of things to choose from. Ever done this
+              before? No? Don’t worry, this is exactly what we’re here for! It's time to #beginyourhack!</p>
+            <p
+              style="text-align: justify; opacity: 1; box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; padding: 15px; font-size: x-large;">
+              Since this will be an event for the tyros, we would highly recommend people who've previously attended a
+              few hackathons to defer from applying since we will be going through your profiles and skillset.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- DOMAINS -->
+    <section id="domains" class="domains reg-gradient">
+      <style>
+        #domains .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #domains .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #domains .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #domains .segment-img-container {
+          position: relative;
+          top: -65px;
+          width: 180px;
+          height: 180px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #domains a {
+          padding: 8px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: -10vw;
+            width: 35vw;
+            height: 35vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #domains .segment-img {
+          width: 80%;
+          height: 80%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #domains .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+        }
+
+        #domains .card-text {
+          text-align: center;
+        }
+
+        #domains .card-block {
+          padding: 0 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #fff;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #domains .card-block ul li {
+          font-size: x-large;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 50px;
+        }
+
+        @media (max-width: 600px) {
+          #domains .card-block {
+            height: 400px;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+          }
+        }
+      </style>
+      <div class="heading text-center">
+        <h1 style="margin: 2% 0;">Domains</h1>
+        <!-- <div class="row align-items-center justify-content-center row-eq-height" style="margin: 2% 0;">
+          
+      </div> -->
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/ai-ml.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">AI/ML</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  For those wanting to break free from reality and get create something new
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/edu.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">Education</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  For those who want to make the abc's a reality for all
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/webapp.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">App Dev</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  For those who like to unlock a plethora of opportunities with a touch on your screens
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/web.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">Web Dev</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  For those wanting to get hooked to the vast web
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/fintech.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">Financial Technology</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  For the currency ambitious, who want to connect cash with tech
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/health.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">Health</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  With the wrath of 2020 that the pandemic served us, this is for those who want to prioritize a healthy
+                  living
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="prize_head">
+      <div class="container">
+        <div class="heading text-center">
+          <h1 style="font-size: 40px;">Prizes</h1>
+        </div>
+        <div class="heading text-center">
+          <span class="worth" style="font-size: 20px;">Worth <span id="amount">&#8377 1,58,000</span></span>
+        </div>
+      </div>
+    </section>
+    <style>
+      @media(max-width: 785px) {
+        #prize_head {
+          border: 4px solid #ff5733;
+          border-radius: 30px;
+          padding: 20px 0px;
+          width: 80%;
+          margin: 0% 10%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+
+      @media(min-width:785px) {
+        #prize_head {
+          border: 4px solid #ff5733;
+          border-radius: 30px;
+          padding: 30px 0px;
+          width: 60%;
+          margin: 0% 20%;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      }
+
+      @media(max-width: 785px) {
+        #amount {
+          font-size: 30px;
+        }
+      }
+
+      @media(min-width:785px) {
+        #amount {
+          font-size: 80px;
+        }
+      }
+    </style>
+
+    <div id="prize">
+      <style>
+        #prize .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #prize .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #prize .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #prize .segment-img-container {
+          position: relative;
+          top: -65px;
+          width: 130px;
+          height: 130px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #prize a {
+          padding: 8px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: -10vw;
+            width: 20vw;
+            height: 20vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #prize .segment-img {
+          width: 60%;
+          height: 60%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #prize .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+        }
+
+        #prize .card-text {
+          text-align: center;
+        }
+
+        #prize .card-block {
+          padding: 0 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #e4e4e4;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #prize .card-block ul li {
+          font-size: larger;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 400px;
+        }
+
+        @media (max-width: 600px) {
+          #prize .card-block {
+            height: 400px;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+          }
+        }
+      </style>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/prizefinal2.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="text-align: center; height: 320px;">
+              <h1 class="prize-card-title">First Prize</h1>
+              <ul>
+                <li>
+                  <h1>Prizes worth <em>&#8377 34,650</em></h1>
+                </li>
+                <li>&#8226; 90% discount on any Coding Blocks course worth &#8377 16,650</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,500</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/prizefinal.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="text-align: center; height: 320px;">
+              <h1 class="prize-card-title">Second Prize</h1>
+              <ul>
+                <li>
+                  <h1>Prizes worth <em>&#8377 32,800</em></h1>
+                </li>
+                <li>&#8226; 80% discount on any Coding Blocks course worth &#8377 14,800</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/prizefinal3.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="text-align: center; height: 320px;">
+              <h1 class="prize-card-title">Third Prize</h1>
+              <ul>
+                <li>
+                  <h1>Prizes worth <em>&#8377 30,850</em></h1>
+                </li>
+                <li>&#8226; 70% discount on any Coding Blocks course worth &#8377 12,850</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/matic_card.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="height: 400px;">
+              <h1 class="prize-card-title">Matic</h1>
+              <ul>
+                <li>&#8226; ₹10,000 for the best hack built on Ethereum</li>
+                <li>&#8226; ₹15,000 for the best hack built on Ethereum + Matic</li>
+                <li>&#8226; Eligibility to apply for internship/full-time roles and seed funding of up to 5,000 USD for winners!
+                </li>
+              </ul>
+            </div>
+            <p class="view-more" style="text-align: center;"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c"
+                rel="noopener noreferrer">View
+                More <i class="fa fa-external-link"></i></a></p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/portis_card.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="height: 400px;">
+              <h1 class="prize-card-title">Portis</h1>
+              <ul>
+                <li>&#8226; ₹15,000 for best Dapp built on Portis</li>
+              </ul>
+            </div>
+            <p class="view-more" style="text-align: center;"><a target="_blank"
+                href="https://www.notion.so/Portis-by-Shapeshift-Devfolio-Hackathon-Season-Prize-e198dfd094a9411b8cd0f80d76a04a90"
+                rel="noopener noreferrer">View
+                More <i class="fa fa-external-link"></i></a></p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./img/tezos_card.png" alt="" class="card-img-top">
+            <div class="segment-img-container">
+              <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
+            </div>
+            <div class="card-block h350" style="height: 400px;">
+              <h1 class="prize-card-title">Tezos</h1>
+              <ul>
+                <li>&#8226; ₹20,000 for best Dapp built on Tezos</li>
+                <li>&#8226; Continuity Grant opportunity for exceptional builders</li>
+              </ul>
+            </div>
+            <p class="view-more" style="text-align: center;"><a target="_blank"
+                href="https://www.notion.so/Tezos-Devfolio-Hackathon-Season-Prize-e90b6811b0df43e5a7dadf534fc000ff"
+                rel="noopener noreferrer">View
+                More <i class="fa fa-external-link"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="pre-event">
+      <style>
+        #pre-event .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #pre-event .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #pre-event .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #pre-event .segment-img-container {
+          position: relative;
+          top: -65px;
+          width: 130px;
+          height: 130px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #pre-event a {
+          padding: 8px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: -10vw;
+            width: 20vw;
+            height: 20vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #pre-event .segment-img {
+          width: 60%;
+          height: 60%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #pre-event .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+          margin-top: 3vw;
+        }
+
+        #pre-event .card-text {
+          text-align: center;
+        }
+
+        #pre-event .card-block {
+          padding: 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #e4e4e4;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #pre-event .card-block ul li {
+          font-size: larger;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 645px;
+        }
+
+        @media (max-width: 600px) {
+          #pre-event .card-block {
+            height: 745px;
+            margin-top: 2vw;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+            margin-top: 2vw;
+          }
+        }
+      </style>
+      <div class="heading text-center">
+        <h1 style="margin: 2% 0;">Pre-Events</h1>
+        <!-- <div class="row align-items-center justify-content-center row-eq-height" style="margin: 2% 0;">
+          
+      </div> -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <!-- <img src="./img/matic_card.png" alt="" class="card-img-top"> -->
+            <div class="card-block h350">
+              <h1 class="prize-card-title">Trusting Artificial Intelligence with Finance</h1>
+              <div class="row" style="margin-top: 0; border: 3px solid #ff5733; border-radius: 20px;">
+                <div class="col-lg-6" style="text-align: center; font-size: large; padding: 3%;">
+                  20 February 2021, Saturday
+                </div>
+                <div class="col-lg-6" style="text-align: center; font-size: large; padding: 3%;">
+                  9.30 AM onwards
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: large;">
+                  One day project-based workshop
+                </div>
+                <hr>
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: medium;">
+                  <span style="font-size: x-large;">Speaker: Ritika Saxena</span><br>
+                  &#8226; CEO - Capsta Group of Companies<br>
+                  &#8226; Upcoming AI research intern at University of Tokyo, Japan<br>
+                  &#8226; Gold Microsoft Learn Student Ambassador<br>
+                </div>
+                <hr>
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: medium;">
+                  Facilitated by Indian Research Journal On Advanced Technologies
+                </div>
+              </div>
+            </div>
+            <p class="view-more" style="text-align: center;"><a target="_blank"
+                href="https://forms.gle/UJ9E3TTgRYiKdxti6"
+                rel="noopener noreferrer">Register Now! <i class="fa fa-external-link"></i></a></p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <!-- <img src="./img/matic_card.png" alt="" class="card-img-top"> -->
+            <div class="card-block h350">
+              <h1 class="prize-card-title">Making phone selfies into powerful diagnostic tools</h1>
+              <div class="row" style="margin-top: 0; border: 3px solid #ff5733; border-radius: 20px;">
+                <div class="col-lg-6" style="text-align: center; font-size: large; padding: 3%;">
+                  21 February 2021, Sunday
+                </div>
+                <div class="col-lg-6" style="text-align: center; font-size: large; padding: 3%;">
+                  9.30 AM onwards
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: large;">
+                  One day project-based workshop
+                </div>
+                <hr>
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: medium;">
+                  <span style="font-size: x-large;">Speaker: Kshitij Soni</span><br>
+                  &#8226; Chairman & MD - Capsta Group of Companies<br>
+                  &#8226; Chairman - Indian Research Journal on Advanced Technologies<br>
+                  &#8226; Founder and student head - E Cell, IIPE Vizag<br>
+                  &#8226; Upcoming research intern at NRAL, India<br>
+                </div>
+                <hr>
+                <div class="col-lg-12" style="text-align: center; margin: 5% 0; font-size: medium;">
+                  Facilitated by Indian Research Journal On Advanced Technologies
+                </div>
+              </div>
+            </div>
+            <p class="view-more" style="text-align: center;"><a target="_blank"
+                href="https://forms.gle/UJ9E3TTgRYiKdxti6"
+                rel="noopener noreferrer">Register Now! <i class="fa fa-external-link"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="heading text-center">
+          <h1>Frequently Asked Questions</h1>
+          <br>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="accordion">
+              <h4>What is a “hackathon”?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                A hackathon is usually a day long (can be 36 hours, 48 hours, etc.) coding competition where software
+                programmers, developers, designers, etc. come together to build and design something cool.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>What do people normally make?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                Hacks generally fall under one (or more) of the six cortices: Web Development, App Development, AI/ML,
+                Education, Health, and Financial Technology. Depending upon the problem statements, participants use
+                any
+                of the above.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>What are the topics and prizes of hackathon?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                The topic and the prizes will be declared soon. So keep an eye on the CSI-KJSCE Facebook Page. Also
+                once
+                you've registered with an e-mail id, we'll shoot you a mail about further announcements.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>Who can attend HackerBash?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                Anyone with the enthusiasm for coding can attend this hackathon. The hackathon is for all age groups
+                and
+                for all the coders.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>How much does it cost to attend HackerBash?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                HackerBash is free for all participants, thanks to our amazing sponsors!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+
+            <div class="accordion">
+              <h4>When and where is the event going to be held?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                HackerBash is going to be completely virtual! Schedule and details of the event will be updated here
+                soon.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>What if I've never been to a hackathon before?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">
+                Not to worry, We welcome students of all skill levels. Hackathons can be a great place to learn new
+                skills in a short amount of time. Just be eager to learn, and excited to meet lots of awesome people.
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>How do teams work?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">You can work on a project on your own, or you can work with a team.
+                Team size must not exceed four members.</p>
+            </div>
+
+            <div class="accordion">
+              <h4>How many members in a team?</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">A team consists of 2-4 members.</p>
+            </div>
+
+            <div class="accordion">
+              <h4>404: Question not found</h4>
+              <h4>+</h4>
+            </div>
+            <div class="panel"
+              style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
+              <p style="margin: 3%; opacity: 1;">You can just drop a DM at any of our social network handles or mail
+                us
+                and we'll try our best to answer them ASAP ;)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- </article> -->
+    <section id="map" class="map">
+      <br><br>
+      <div class="heading text-center">
+        <h1>Reach Us</h1>
+        <br>
+      </div>
+      <div class="container-fluid">
+
+        <div class="row no-gutters">
+          <div class="mapouter">
+            <div class="lastattempt " style="height: 500px; margin: 0 auto;" position="center">
+              <iframe class="lastattempt " position="center"
+                src="https://maps.google.com/maps?q=kjsce&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+            <style>
+              .mapouter {
+                text-align: center;
+                height: 400px;
+                width: 400px;
+                position: center;
+                margin: 0 auto;
+              }
+
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 400px;
+                width: 400px;
+                position: center;
+                margin: 0 auto;
+              }
+            </style>
+          </div>
+          <div class="venue-info">
+            <div class="justify-content-center">
+              <div class="textval">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="sponsors-gradient">
+      <section id="sponsors" class="sponsors">
+
+        <div class="container text-center">
+          <h1>Sponsors</h1>
+          <br>
+
+          <div class="accordion">
+            <h1>Co-Sponsor</h1>
+          </div>
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://devfolio.co"><img class="sponsors-image" src="img/devfolio.svg"
+                      title="Devfolio"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="accordion">
+            <h1>Associate Sponsors</h1>
+          </div>
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://www.portis.io/"><img class="sponsors-img"
+                      src="./img/Portis_Logo-White@2x.png" title="Portis"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://matic.network/"><img class="sponsors-img" src="img/matic.png"
+                      title="Matic"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://tezos.com/"><img class="sponsors-img"
+                      src="img/Tezos_Logo-White@2x.png" title="Tezos"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://balsamiq.com/"><img class="sponsor-img"
+                      src="img/balsamiq-logo-screen.svg" title="Balsamiq"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://codingblocks.com/"><img class="sponsor-img" src="./img/cb_white.png"
+                      title="Coding Blocks"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://repl.it/"><img class="sponsor-img" src="./img/repl_spon.png"
+                      title="ReplIt"></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="accordion">
+            <h1>Education Sponsor</h1>
+          </div>
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://SYBGEN.com/"><img class="sponsor-img"
+                      src="./img/SPOILER_SYBGEN_LOGO.jpg" title="SYBGEN"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <h1>Media Sponsor</h1>
+          </div>
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://edubard.in/"><img class="sponsor-img" src="./img/edubard_sponpng.png"
+                      title="Edubard"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion">
+            <h1>Certification Sponsor</h1>
+          </div>
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://givemycertificate.com/index.php"><img class="sponsor-img"
+                      src="./img/GMC_sponpng.png" title="Give My Certificate"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Sponsor Contact -->
+          <div class="last-bar"> </div>
+          <div class="caption">
+            <h1 style="margin-bottom: 1%;">Interested in sponsoring HackerBash 2021?</h1>
+            <h2>Reach us at<a target="_blank" href="mailto:csi-kjsce@somaiya.edu"
+                style="color: #ff5733;">csi-kjsce@somaiya.edu</a></h2>
+
+          </div>
+        </div>
+      </section>
+    </article>
+
+
+
+    <article class="contact contact-gradient">
+
+      <div class="container">
+        <div class="heading" style="text-align:center;margin-bottom:40px;">
+          <br>
+          <h1 style="margin-bottom: 1%;">Contact Us</h1>
+          <h2>Reach out to us at<a target="_blank" href="http://www.csikjsce.org"
+              style="color: #ff5733;">csikjsce.org</a></h2>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex-center">
+          <a href="https://twitter.com/CSI_KJSCE" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-twitter fa-4x icon-3d"></i></a>
+          <a href="https://www.facebook.com/csikjsomaiya/" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-facebook fa-4x icon-3d"></i></a>
+          <a href="https://www.instagram.com/csikjsce/?hl=en" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-instagram fa-4x icon-3d"></i></a>
+          <a href="https://github.com/CSI-KJSCE" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-github fa-4x icon-3d"></i></a>
+
+        </div>
+        <style>
+          .flex-center {
+            width: 100%;
+            /* min-height: 50vh; */
+
+            /* background: #320A68; */
+
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+          }
+
+          @media (max-width:750px) {
+            .fa-4x {
+              font-size: 35px;
+            }
+          }
+
+          .icon-3d {
+            padding: 10px;
+            color: #fff;
+          }
+
+          .icon-3d:hover {
+            -webkit-animation: icon3d 500ms infinite;
+            animation: icon3d 500ms infinite;
+          }
+
+
+          @keyframes icon3d {
+            0% {
+              text-shadow: 5px 0px rgba(244, 67, 54, 1), -5px 0px rgba(33, 150, 243, 1);
+            }
+
+            25% {
+              text-shadow: -5px 0px rgba(244, 67, 54, 1), 5px 0px rgba(33, 150, 243, 1);
+            }
+
+            50% {
+              text-shadow: 5px 0px rgba(244, 67, 54, 1), -8px 0px rgba(33, 150, 243, 1);
+            }
+
+            75% {
+              text-shadow: -8px 0px rgba(244, 67, 54, 1), -5px 0px rgba(33, 150, 243, 1);
+            }
+
+            100% {
+              text-shadow: -5px 0 rgba(244, 67, 54, 1), 5px 0px rgba(33, 150, 243, 1);
+            }
+          }
+
+          .fa {
+            color: white;
+          }
+        </style>
+      </div>
+    </article>
+  </article>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+
+    // function to change navbar color when scrolling
+    $(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 5) {
+          $("#navbar").addClass('changeColor')
+          //console.log($('#navbar').css('background-color'))
+        }
+        if ($(this).scrollTop() < 5) {
+          $('#navbar').removeClass('changeColor')
+          // console.log($('#navbar').css('background-color'))
+        }
+      });
+    });
+  </script>
+  <script>
+
+
+    // document.getElementById('bg-video').play();
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+  </script>
+  <script>
+    var sat = true;
+    let inner_color = "#1e88e5";
+    let text_color = "#fff";
+    $("#satbtn").css("border-color", inner_color);
+    $("#satbtn").css("background", inner_color);
+    $("#satbtn").css("color", text_color);
+    $("#satbtn").css("outline-style", "none");
+    $("#sunbtn").css("outline-style", "none");
+    $("#satbtn").click(function () {
+      if (sat == false) {
+        $("#sunday").css("display", "none");
+        sat = true;
+        $("#saturday").css("display", "table-row-group");
+        // $("#satbtn").css("background", "transparent");
+        $("#satbtn").css("border-color", inner_color);
+        $("#satbtn").css("background", inner_color);
+        $("#satbtn").css("color", text_color);
+        // $("#satbtn").css("outline-style", "none");
+
+        $("#sunbtn").css("background", "transparent");
+        $("#sunbtn").css("border-color", "#ffffff");
+      }
+    });
+
+    $("#sunbtn").click(function () {
+      if (sat == true) {
+        $("#saturday").css("display", "none");
+        sat = false;
+        $("#sunday").css("display", "table-row-group");
+        $("#sunbtn").css("background", inner_color);
+        $("#sunbtn").css("border-color", inner_color);
+        $("#sunbtn").css("color", text_color);
+
+        $("#satbtn").css("border-color", "#ffffff");
+        $("#satbtn").css("background", "transparent");
+
+      }
+
+    });
+
+
+
+  </script>
+
+  <script>
+    $("#about-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#about").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#domains-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#domains").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+<script>
+  $("#preevent-nav").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#pre-event").offset().top
+    }, 1300);
+    return false;
+  });
+</script>
+
+  <script>
+    $("#schedule-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#schedule").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#faq-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#faq").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#map-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#map").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#register-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#registration").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#schedule-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#schedule").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#sponsors-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#sponsors").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/countdowntime/moment.min.js"></script>
+  <script src="vendor/countdowntime/moment-timezone.min.js"></script>
+  <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+  <script>
+    $('.cd100').countdown100({
+      /*Set Endtime here*/
+      /*Endtime must be > current time*/
+      endtimeYear: 0,
+      endtimeMonth: 0,
+      endtimeDate: 35,
+      endtimeHours: 18,
+      endtimeMinutes: 0,
+      endtimeSeconds: 0,
+      timeZone: ""
+      // ex:  timeZone: "America/New_York"
+      //go to " http://momentjs.com/timezone/ " to get timezone
+    });
+  </script>
+  <!--===============================================================================================-->
+  <script src="vendor/tilt/tilt.jquery.min.js"></script>
+  <script>
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+
+  </script>
+  <!--===============================================================================================-->
+  <script src="js/main2.js"></script>
+  <script src="https://apply.devfolio.co/v2/sdk.js"></script>
+
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+</html>
+
+<!-- <section id="domains" class="domains reg-gradient">
+        <div class="container">
+          <div class="heading text-center">
+            <h1>Last Years Domains</h1>
+          </div>
+          <div class="row row-eq-height">
+            <p><br></p>
+          </div>
+          <div class="row align-items-center justify-content-center row-eq-height">
+            <div class="col-lg-4">
+              <div class="domain-card cyan">
+                <div class="img-holder">
+                  <img src="img/ML.png">
+                </div>
+                <div class="heading">
+                  <p class="domain-heading">AI/ML</p><br>
+                </div>
+                <p>
+                  This domain is based on challenges from different industry verticals, giving an exposure to machine learning problems to the participants. The need for more personalized machine interactions in every sphere of technology has led to the invention of many new hacks in the domain. When it comes to innovations in AI, the sky's the limit.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="domain-card lavender">
+                <div class="img-holder">
+                  <img src="img/blockchain.png">
+                </div>
+                <div class="heading">
+                  <p class="domain-heading">Blockchain</p><br>
+                </div>
+                <p>
+                  In recent years, “blockchain” has become one of the biggest buzzwords in technology. In this domain participants are expected to build an application on top of a blockchain ecosystem. The hackathon will involve sharing of some creative ideas, demonstrate understanding of fundamentals and explore developer tools.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="domain-card cyan">
+                <div class="img-holder">
+                  <img src="img/AR_VR.png">
+                </div>
+                <div class="heading">
+                  <p class="domain-heading">AR/VR</p><br>
+                </div>
+                <p>What if you could make the impossible a reality? That’s the promise of augmented and virtual reality. This emerging tech has the potential to redefine every technological landscape and, indeed the whole world! Where human imagination stops, augmented and virtual reality delivers. This domain is for everyone who loves creativity, innovation and learning.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center justify-content-center row-eq-height">
+            <div class="col-lg-4">
+              <div class="domain-card lavender">
+                <div class="img-holder">
+                  <img src="img/IoT.png">
+                </div>
+                <div class="heading">
+                  <p class="domain-heading">IoT</p><br>
+                </div>
+                <p>Everyone, from consumers to corporates, is embracing the changes brought by IoT. The Internet of Things aims to develop internet connectivity for the daily purpose devices that can efficiently send and receive data. It is one of the emerging topics in Computer Science and hence this domain would provide extensive exposure of the same to the participants.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="domain-card cyan">
+                <div class="img-holder">
+                  <img src="img/Fintech.png">
+                </div>
+                <div class="heading">
+                  <p class="domain-heading">Financial Technology</p><br>
+                </div>
+                <p>This domain focuses on using technology to accelerate financial activities. It is an emerging sector and helps financial institutions/consumers deliver financial services in newer and faster ways than earlier available. This important domain will help build on the skills concerning the economical aspects of computing.</p><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+    
+    
+    <div class="col-lg-4" style="border: 3px solid #FF5733; border-radius: 5%;">
+            <div class="domain-card cyan">
+              <div class="img-holder">
+                <img src="img/ML.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">AI/ML</p><br>
+              </div>
+              <p style="color: white;">
+                This domain is based on challenges from different industry verticals, giving an exposure to machine learning problems to the participants. The need for more personalized machine interactions in every sphere of technology has led to the invention of many new hacks in the domain. When it comes to innovations in AI, the sky\'s the limit.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4" style="border: 3px solid #FFC300; border-radius: 5%;">
+            <div class="domain-card lavender">
+              <div class="img-holder">
+                <img src="./img/health.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">Health</p><br>
+              </div>
+              <p style="color: white;">
+                In recent years, “blockchain” has become one of the biggest buzzwords in technology. In this domain participants are expected to build an application on top of a blockchain ecosystem. The hackathon will involve sharing of some creative ideas, demonstrate understanding of fundamentals and explore developer tools.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4" style="border: 3px solid #FF5733; border-radius: 5%;">
+            <div class="domain-card cyan">
+              <div class="img-holder">
+                <img src="./img/edu.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">Education</p><br>
+              </div>
+              <p style="color: white;">What if you could make the impossible a reality? That’s the promise of augmented and virtual reality. This emerging tech has the potential to redefine every technological landscape and, indeed the whole world! Where human imagination stops, augmented and virtual reality delivers. This domain is for everyone who loves creativity, innovation and learning.</p>
+            </div>
+          </div>
+        </div>
+      
+      <div class="row align-items-center justify-content-center row-eq-height" style="margin: 2% 0;">
+          <div class="col-lg-4" style="border: 3px solid #FFC300; border-radius: 5%;">
+            <div class="domain-card lavender">
+              <div class="img-holder">
+                <img src="./img/web.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">Web Dev</p><br>
+              </div>
+              <p style="color: white;">Everyone, from consumers to corporates, is embracing the changes brought by IoT. The Internet of Things aims to develop internet connectivity for the daily purpose devices that can efficiently send and receive data. It is one of the emerging topics in Computer Science and hence this domain would provide extensive exposure of the same to the participants.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" style="border: 3px solid #FF5733; border-radius: 5%;">
+            <div class="domain-card cyan">
+              <div class="img-holder">
+                <img src="img/Fintech.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">Financial Technology</p><br>
+              </div>
+              <p style="color: white;">This domain focuses on using technology to accelerate financial activities. It is an emerging sector and helps financial institutions/consumers deliver financial services in newer and faster ways than earlier available. This important domain will help build on the skills concerning the economical aspects of computing.</p><br>
+            </div>
+          </div>
+
+          <div class="col-lg-4" style="border: 3px solid #FF5733; border-radius: 5%;">
+            <div class="domain-card cyan">
+              <div class="img-holder">
+                <img src="./img/webapp.png">
+              </div>
+              <div class="heading">
+                <p class="domain-heading">App Dev</p><br>
+              </div>
+              <p style="color: white;">This domain focuses on using technology to accelerate financial activities. It is an emerging sector and helps financial institutions/consumers deliver financial services in newer and faster ways than earlier available. This important domain will help build on the skills concerning the economical aspects of computing.</p><br>
+            </div>
+          </div>
+        </div>
+      
+      <div class="bg-img1 overlay1 size5 flex-c-m">
+          <div class="wsize1">
+            <p class="txt-center m2-txt1" style="font-family: fibra_light;">
+              Registrations close in
+            </p>
+            <div class="flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1" id="timer">
+              <div class="flex-col-c-m wsize2 m-b-20">
+                <span class="l1-txt2 p-b-4 days" style="font-family: fibra_light;" id="countdays"></span>
+                <span class="m2-txt2" style="font-family: fibra_light;">Days</span>
+              </div>
+
+              <span class="l1-txt2 p-b-22" style="font-family: fibra_light;">:</span>
+
+              <div class="flex-col-c-m wsize2 m-b-20">
+                <span class="l1-txt2 p-b-4 hours" style="font-family: fibra_light;" id="counthours"></span>
+                <span class="m2-txt2" style="font-family: fibra_light;">Hours</span>
+              </div>
+
+              <span class="l1-txt2 p-b-22 " style="font-family: fibra_light;">:</span>
+
+              <div class="flex-col-c-m wsize2 m-b-20">
+                <span class="l1-txt2 p-b-4 minutes" style="font-family: fibra_light;" id="countminutes"></span>
+                <span class="m2-txt2" style="font-family: fibra_light;">Minutes</span>
+              </div>
+
+              <span class="l1-txt2 p-b-22">:</span>
+
+              <div class="flex-col-c-m wsize2 m-b-20">
+                <span class="l1-txt2 p-b-4 seconds" style="font-family: fibra_light;" id="countseconds"></span>
+                <span class="m2-txt2" style="font-family: fibra_light;">Seconds</span>
+              </div>
+            </div>
+          </div>
+        </div>-->
