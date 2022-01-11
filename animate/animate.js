@@ -2,21 +2,26 @@
 // DOM selectors
 const stars = document.getElementById('stars');
 const starsCtx = stars.getContext('2d');
-const slider = document.querySelector(".slider input");
-const output = document.querySelector("#speed");
+const slider = document.querySelector(".slider");
+
 
 // global variables
-let screen, starsElements, starsParams = { speed: 2, number: 600, extinction: 4 };
+let screen, starsElements, starsParams = { speed: 2, number: 650, extinction: 4 };
 
 // run stars
 setupStars();
 updateStars();
 
 // handle slider
-output.innerHTML = slider.value;
-slider.oninput = function() {
-    output.innerHTML = this.value;
-    starsParams.speed = this.value;
+
+slider.onmouseover = function() {
+    console.log("mouse")
+    starsParams.speed = 18;
+};
+
+slider.onmouseout = function() {
+    console.log("Not hovering")
+    starsParams.speed = 4;
 };
 
 // update stars on resize to keep them centered
