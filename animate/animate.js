@@ -6,7 +6,7 @@ const slider = document.querySelector(".slider input");
 const output = document.querySelector("#speed");
 
 // global variables
-let screen, starsElements, starsParams = { speed: 2, number: 300, extinction: 4 };
+let screen, starsElements, starsParams = { speed: 2, number: 600, extinction: 4 };
 
 // run stars
 setupStars();
@@ -48,7 +48,7 @@ function Star() {
 
         starsCtx.beginPath();
         starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
-        starsCtx.arc(x, y, rad, 0, Math.PI * 2);
+        starsCtx.arc(x, y, rad-0.8, 0, Math.PI * 2);
         starsCtx.fill();
     }
 }
@@ -71,7 +71,7 @@ function setupStars() {
 
 // redraw the frame
 function updateStars() {
-    starsCtx.fillStyle = "black";
+    starsCtx.fillStyle = "#07031a";
     starsCtx.fillRect(0, 0, stars.width, stars.height);
     starsElements.forEach(function (s) {
         s.show();

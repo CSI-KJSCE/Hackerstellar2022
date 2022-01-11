@@ -1367,7 +1367,7 @@ article.footer {
   width:100%;
 }
 .hackitbox{
-  background:#1A063A;
+  background: linear-gradient(#030119 0%, #00172c 90%,#1A063A 100%);
 }
 
 
@@ -1415,7 +1415,9 @@ body {
   font-size: 30px;
 }
 .navbar-custom{
-  background-color:#1b1c4b;
+  box-shadow: inset -7px -8px 20px 3px ;
+  background: inherit;
+  backdrop-filter: blur(10px);
 }
 
 
