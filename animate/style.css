@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@1,300&display=swap');
 body, html {
     padding: 0;
     margin: 0;
@@ -16,4 +17,79 @@ body, html {
 .slider input {
     width: 100%;
     margin-bottom: 5px;
+}
+.header-title-div img{
+    position: fixed;
+    top: 130px;
+    width: 50%;
+    margin-left: 20px;
+    color: white;
+    font-family: sans-serif;
+    text-align: right;
+}
+.header-title-div p{
+    position: fixed;
+    top: 210px;
+    left:350px;
+    width: 200px;
+    margin-left: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: right;
+    font-size:18px;
+}
+
+.custom_dates_header h3{
+    position: fixed;
+    top: 265px;
+    width: 500px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+    font-size:large;
+    font-size:22px;
+    letter-spacing: 1.7px;
+}
+
+.custom_dates_header span{
+    position: fixed;
+    top: 330px;
+    left:180px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: right;
+    font-size:200;
+    font-size:18px;
+    letter-spacing: 1.7px;
+}
+
+.Registeration_button{
+    display: block;
+}
+.slider{
+    position: fixed;
+    top: 380px;
+    left:210px;
+    width: 200px;
+    border-radius: 10px;
+    color:white;
+    background-color:#0b4ec9;
+    font-size: 20px;
+    justify-content:center;
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+}
+.discord_logo img{
+    position: fixed;
+    top: 380px;
+    left:380px;
+    height: 45px;
+    width:45px;
+    margin-left: 50px;
+    border-radius: 10px;
+    cursor: pointer;
 }
