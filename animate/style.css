@@ -20,8 +20,8 @@ body, html {
 }
 .header-title-div img{
     position: fixed;
-    top: 130px;
-    width: 50%;
+    top: 7%;
+    width: 45%;
     margin-left: 20px;
     color: white;
     font-family: sans-serif;
@@ -29,32 +29,33 @@ body, html {
 }
 .header-title-div p{
     position: fixed;
-    top: 210px;
-    left:350px;
+    top: 12%;
+    left:26%;
     width: 200px;
     margin-left: 20px;
     color: white;
     font-family: "Poppins", sans-serif;
     text-align: right;
-    font-size:18px;
+    font-size:17px;
 }
 
 .custom_dates_header h3{
     position: fixed;
-    top: 265px;
-    width: 500px;
+    top: 15%;
+    width: 450px;
     color: white;
     font-family: 'Lato', sans-serif;
     text-align: right;
     font-size:large;
     font-size:22px;
     letter-spacing: 1.7px;
+    font-weight: bolder;
 }
 
 .custom_dates_header span{
     position: fixed;
-    top: 330px;
-    left:180px;
+    top: 17%;
+    left: 130px;
     color: white;
     font-family: 'Lato', sans-serif;
     text-align: right;
@@ -68,8 +69,8 @@ body, html {
 }
 .slider{
     position: fixed;
-    top: 380px;
-    left:210px;
+    top: 21%;
+    left:190px;
     width: 200px;
     border-radius: 10px;
     color:white;
@@ -85,11 +86,11 @@ body, html {
 }
 .discord_logo img{
     position: fixed;
-    top: 380px;
-    left:380px;
+    top: 21%;
+    left:350px;
     height: 45px;
     width:45px;
-    margin-left: 50px;
+    margin-left: 60px;
     border-radius: 10px;
     cursor: pointer;
 }
