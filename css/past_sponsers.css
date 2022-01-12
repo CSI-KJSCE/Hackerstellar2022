@@ -1375,7 +1375,6 @@ article.footer {
 }
 body {
   background-color:#1A063A;   /* navbar backg color */
-  height: 2000px;
 }
 /*
 
@@ -1456,7 +1455,7 @@ body {
      /* position:absolute;         /*changes */
      /* width:100%;
      left:0; */
-    margin-bottom: 11rem; }
+    margin-bottom: 1rem; }
   .section p, section.travel-questions p, section.travel-schedule p, article.body section.dono-story p, article.body section.dono-promise p, article.body section.dono-impact p, article.body section.dono-questions p, article.body section.intro p, article.body section.domains p, article.body section.faq p, article.body section.speakers p, article.body section.donate p, article.body section.sponsors p, section.dono-impact p, section.sched p, article.contact p {
     margin-bottom: 2rem;
     opacity: 0.8; }

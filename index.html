@@ -43,6 +43,7 @@
   <link rel="stylesheet" type="text/css" href="css/main2.css">
   <link rel="stylesheet" type="text/css" href="css/timeline.css">
   <link rel="stylesheet" type="text/css" href="./css/faq.scss">
+  <link rel="stylesheet" type="text/css" href="animate/style.css">
 
   <!-- Facebook Pixel Code -->
   <script>
@@ -70,14 +71,16 @@
       position: relative;
       width: 100%;
     }
-
-    /* Make the image responsive */
-    .containercsi img {
-      width: 100%;
-      height: auto;
+    .Download_button{
+      background-color:#0b4ec9;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      margin-top: 30px;
+      border-radius: 5px;
     }
-
-
+    /* Make the image responsive */
+    
     /* this for the two toggle buttons in schedule*/
     #day-toggle-container {
       display: flex;
@@ -190,14 +193,14 @@
   </style>
 </head>
 
-<body style="background-color: #1A063A">
+<body style="background-color: #07031a">
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-custom makebgblue ">
 
     <div class="container">
 
       <a class="navbar-brand" href="https://csikjsce.org/index.html" target="_blank" rel="noopener noreferrer">
-        <div class="logo-image navbar-custom">
+        <div class="logo-image">
           <img src="img/CSIlogo.png" class="img-fluid">
         </div>
       </a>
@@ -231,12 +234,26 @@
 
   <article>
     <div class="containercsi">
-      <img class="containercsi" src="img/hackerbash.gif">
-      <!-- <button id="devfolio-apply-now">  -->
-      <!-- 
-        Apply with Devfolio
-      </button> -->
+      <canvas id="stars">
+      </canvas>
+      <div class="header-title-div">
+        <img src="img/hackerstellar.png" alt="Hackerstellar"></img>
+        <p>Aspire to Innovate</p>
 
+        <div class="custom_dates_header"> 
+            <h3>27<sup>th</sup> - 28<sup>th</sup> February 2022</h3>
+            <span>Last date of registration : 5<sup>th</sup> Feb 2022</span>
+        </div>
+
+        <div class="Registeration_button">
+            <div class="slider">
+                Register Now
+            </div>
+            <div class="discord_logo">
+                <img src="img/discors.png" alt="Discord"></img>
+            </div>
+        </div>
+      </div>
     </div>
   </article>
 
@@ -427,7 +444,7 @@
         <div class="hackitbox">
           <!-- class="text-container round-frame" -->
           <div class="heading">
-            <h1> What is HackerBash?</h1>
+            <h1> What is HackerStellar?</h1>
 
             <p style="text-align: justify; opacity: 1;">Computer Society of India - a students' chapter of the K.J.
               Somaiya College of Engineering proudly introduces HackerBash, as a part of our annual flagship council
@@ -1562,6 +1579,13 @@
             <h2>Reach us at<a target="_blank" href="mailto:csi-kjsce@somaiya.edu"
                 style="color: #ff5733;">csi-kjsce@somaiya.edu</a></h2>
 
+            <a href="brochure/Hackerstellar-2022.pdf" download="Hackerstellar2022.pdf" target="_blank">
+              <button class="Download_button">
+                <i class="fa fa-download"></i>
+                Open Brochure
+              </button>
+            </a>
+
           </div>
         </div>
       </section>
@@ -1860,7 +1884,7 @@
   <!--===============================================================================================-->
   <script src="js/main2.js"></script>
   <script src="https://apply.devfolio.co/v2/sdk.js"></script>
-
+  <script src="animate/animate.js"></script>
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.2.4/firebase-app.js"></script>

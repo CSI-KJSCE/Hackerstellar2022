@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Hackerstellar 2022</title>
+  <meta name="description" content="24 hour hackathon @ KJSCE Vidyavihar">
+  <meta name="keywords" content="Hack, HackIt, TechNext, Hackathon, CSI, KJSCE">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#201E5C">
+  <!-- <link rel="shortcut icon" ./favicon.ico" /> -->
+
+  <!-- Google site verif -->
+  <meta name="google-site-verification" content="uGQ5sqadq9-6SPyKFrrOm_N5oys-xoJ7sSBKjw6LCI4" />
+
+  <!-- Open Graph data (Facebook) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/favicon.ico" rel="apple-touch-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/past_sponsers.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main2.css">
+  <link rel="stylesheet" type="text/css" href="./css/faq.scss">
+  <link rel="stylesheet" type="text/css" href="animate/style.css">
+  <link rel="stylesheet" type="text/css" href="css/rocket.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathHelper.min.js"></script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2430237730636491');
+    fbq('track', 'PageView');
+  </script>
+
+
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2430237730636491&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <style>
+    .containercsi {
+      position: relative;
+      width: 100%;
+      background-color: linear-gradient(#030119 0%, #00172c 90%,#1A063A 100%);
+      display: flex;
+      color:#e1d1fa;
+    }
+    .containercsi h2{
+        font-size:7em;
+        font-weight: 600;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    /* Make the image responsive */
+    
+    /* this for the two toggle buttons in schedule*/
+    #day-toggle-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0;
+    }
+
+    .daytogglebuttons {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Style the button and place it in the middle of the container/image */
+    .containercsi .csi {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-75%, -75%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(255, 0, 149);
+      color: white;
+      font-size: 16px;
+      padding: 15px 32px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .containercsi .csi:hover {
+      background-color: #1A063A
+    }
+
+    .resp-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }
+
+    .resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .embed-responsive-10by3 {
+      padding-top: 30%;
+    }
+
+    .lastattempt {
+      /* width:400px;  */
+      width: 450px;
+      height: 450px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .lastattempt {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .a123map-responsive {
+      overflow: hidden;
+      padding-bottom: 50%;
+      position: relative;
+      height: 0;
+    }
+
+    .a123map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    .map-container-2 {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+
+    .map-container-2 iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+
+    @font-face {
+      font-family: fibra_light;
+      src: url('fonts/Los Andes - Fibra Light.otf');
+    }
+
+    h1,
+    h2,
+    h4,
+    p,
+    a,
+    span {
+      font-family: fibra_light;
+    }
+  </style>
+</head>
+
+<body style="background-color: #07031a">
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-custom makebgblue ">
+
+    <div class="container">
+
+      <a class="navbar-brand" href="https://csikjsce.org/index.html" target="_blank" rel="noopener noreferrer">
+        <div class="logo-image">
+          <img src="img/CSIlogo.png" class="img-fluid">
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end ">
+          <li class="nav-item navbar-text">
+            <a class="nav-link" href="#" id="about-nav" style="opacity: 1;">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="domains-nav" style="opacity: 1;">Domains</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="preevent-nav" style="opacity: 1;">Pre-Events</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="faq-nav" style="opacity: 1;">FAQ</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="map-nav" style="opacity: 1;">Map</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="sponsors-nav" style="opacity: 1;">Sponsors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- </nav> -->
+  </nav>
+
+
+  <article>
+    <div class="containercsi">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 800">
+            <path id="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2" stroke-dasharray="10 20.1" d="M20.2 679.7c210.3-19.1 398.9-219.6 236.5-257.5-170.5-16.8-132.5 146.2-6.8 184.7 141.6 55.7 242.3-9.9 215.3-89.3-43.7-94-330-292-85-347.3 135.5-18.7 251 54.7 302.9 141.5 50.2 85 25.5 183.8 136.6 248.6C1000 627 1037.7 427 1039 395.7c20.3-196.6-133.8-218-199.5-170s-11.3 138.5 107 114S1126.7 147.6 1092.6 67c-2.4-12.2-1.4-23.1 9.2-31.8 100.8-49.4 112.2 198.4 239-23.8"/>
+           <g class="rocket">
+                <g fill="#fff">
+                  <path d="M77.4 651.4a13.3 13.3 0 00-14.8-11.6c-19 2.2-29.8 17-55.5 20 25.7-3 39.7 8.7 58.7 6.4a13.3 13.3 0 0011.6-14.8z" opacity=".5" style="isolation:isolate"/>
+                  <path d="M77.4 651.4a9 9 0 00-9.9-7.8c-12.7 1.5-20 11.4-37.1 13.4 17.2-2 26.5 5.8 39.2 4.3a9 9 0 007.8-9.9z"/>
+                </g>
+                <g fill="#63c6be">
+                  <path d="M111.9 669.7l-15.1 13.7a8.4 8.4 0 01-6.7 2.1l-23-2.8a1 1 0 01-1-1.1 1 1 0 01.2-.5l14-19.7z"/>
+                  <path d="M106.7 625.4L89 615.5a8.4 8.4 0 00-7-.5l-21.8 8a1 1 0 00-.3 1.7l18.2 16z"/>
+                </g>
+                <path fill="#fff" d="M173.2 640.3c-18.8-18.2-72-23.2-94.7-4a2.6 2.6 0 00-1 2.2l3 25a2.6 2.6 0 001.4 2c26.4 13.6 77-3.3 91.3-25.2z"/>
+                <path fill="#63c6be" d="M173.2 640.3a63.6 63.6 0 00-30.8-14c-.4-6.5 4 34.5 4 34.5a63.7 63.7 0 0026.8-20.5z"/>
+                <circle cx="123.2" cy="646" r="11.7" fill="#63c6be" transform="rotate(-49.2 123.2 646)"/>
+                <path fill="#22173f" d="M125.7 655a9.4 9.4 0 116.6-11.5 9.4 9.4 0 01-6.6 11.6z"/>
+              </g>
+          </svg>    
+          
+          <h2>Our Past<br> Sponsers</h2>
+    </div>
+  </article>
+
+  <article class="body">
+
+    <section class="intro intro-gradient hackitbox" id="timer">
+      <style>
+        #timer .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #timer .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #timer .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #timer .segment-img-container {
+          position: relative;
+          top: -25px;
+          width: 180px;
+          height: 180px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #timer a {
+          padding: 15px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: 10vw;
+            width: 35vw;
+            height: 35vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #timer .segment-img {
+          width: 80%;
+          height: 80%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #timer .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+        }
+
+        #timer .card-text {
+          text-align: center;
+        }
+
+        #timer .card-block {
+          padding: 0 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #fff;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #timer .card-block ul li {
+          font-size: x-large;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 50px;
+        }
+
+        @media (max-width: 600px) {
+          #timer .card-block {
+            height: 400px;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+          }
+        }
+      </style>
+  
+      <div class="container" id="about">
+        <div class="hackitbox">
+          <div class="heading">
+            <p
+              style="text-align: center; opacity: 1; box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; padding: 15px; font-size: x-large;">
+              Sponsers for Hackerbash 2021</p>
+          </div>
+        </div>
+    </section>
+
+
+
+    <div id="pre-event">
+      <style>
+        #pre-event .row {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        #pre-event .card-img-top {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 30vh;
+        }
+
+        #pre-event .card {
+          background: #1a1949;
+          margin: 100px auto;
+          margin-bottom: 40px;
+          position: relative;
+          border-radius: 20px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #pre-event .segment-img-container {
+          position: relative;
+          top: -65px;
+          width: 130px;
+          height: 130px;
+          margin-left: 50%;
+          transform: translate(-50%, 0);
+          border-radius: 50%;
+          background-color: #1a1949;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #pre-event a {
+          padding: 8px 15px;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+          .segment-img-container {
+            top: -10vw;
+            width: 20vw;
+            height: 20vw;
+          }
+
+          .card-img-top {
+            height: auto;
+          }
+        }
+
+        #pre-event .segment-img {
+          width: 60%;
+          height: 60%;
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        #pre-event .prize-card-title {
+          text-align: center;
+          min-height: 77px;
+          margin-top: 3vw;
+        }
+
+        #pre-event .card-text {
+          text-align: center;
+        }
+
+        #pre-event .card-block {
+          padding: 1vw;
+          justify-content: center;
+          background-color: #1a1949;
+          color: #e4e4e4;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          border-top-right-radius: 30px;
+          border-top-left-radius: 30px;
+          margin-top: -4vw;
+        }
+
+        #pre-event .card-block ul li {
+          font-size: larger;
+          padding: 4px 0;
+        }
+
+        .h500 {
+          height: 550px;
+        }
+
+        .h400 {
+          height: 400px;
+        }
+
+        .h350 {
+          height: 645px;
+        }
+
+        @media (max-width: 600px) {
+          #pre-event .card-block {
+            height: 745px;
+            margin-top: 2vw;
+          }
+
+          .stretched-sagar {
+            height: 180px;
+            margin-top: 2vw;
+          }
+        }
+      </style>
+      
+
+    <article class="sponsors-gradient">
+      <section id="sponsors" class="sponsors">
+
+        <div class="container text-center">
+          <div class="panel">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-4">
+                    <div class="sponsor sponsor-img">
+                      <a target="_blank" href="https://devfolio.co"><img class="sponsors-image" src="img/devfolio.svg"
+                          title="Devfolio"></a>
+                    </div>
+                </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://www.portis.io/"><img class="sponsors-img"
+                      src="./img/Portis_Logo-White@2x.png" title="Portis"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://matic.network/"><img class="sponsors-img" src="img/matic.png"
+                      title="Matic"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://tezos.com/"><img class="sponsors-img"
+                      src="img/Tezos_Logo-White@2x.png" title="Tezos"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://balsamiq.com/"><img class="sponsor-img"
+                      src="img/balsamiq-logo-screen.svg" title="Balsamiq"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://codingblocks.com/"><img class="sponsor-img" src="./img/cb_white.png"
+                      title="Coding Blocks"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://repl.it/"><img class="sponsor-img" src="./img/repl_spon.png"
+                      title="ReplIt"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://SYBGEN.com/"><img class="sponsor-img"
+                      src="./img/SPOILER_SYBGEN_LOGO.jpg" title="SYBGEN"></a>
+                </div>
+               </div>
+               <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://edubard.in/"><img class="sponsor-img" src="./img/edubard_sponpng.png"
+                      title="Edubard"></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sponsor sponsor-img">
+                  <a target="_blank" href="https://givemycertificate.com/index.php"><img class="sponsor-img"
+                      src="./img/GMC_sponpng.png" title="Give My Certificate"></a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- Sponsor Contact -->
+          <div class="last-bar"> </div>
+          <div class="caption">
+            <h1 style="margin-bottom: 1%;">Interested in sponsoring HackerBash 2021?</h1>
+            <h2>Reach us at<a target="_blank" href="mailto:csi-kjsce@somaiya.edu"
+                style="color: #ff5733;">csi-kjsce@somaiya.edu</a></h2>
+          </div>
+        </div>
+      </section>
+    </article>
+
+
+
+    <article class="contact contact-gradient">
+
+      <div class="container">
+        <div class="heading" style="text-align:center;margin-bottom:40px;">
+          <br>
+          <h1 style="margin-bottom: 1%;">Contact Us</h1>
+          <h2>Reach out to us at<a target="_blank" href="http://www.csikjsce.org"
+              style="color: #ff5733;">csikjsce.org</a></h2>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex-center">
+          <a href="https://twitter.com/CSI_KJSCE" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-twitter fa-4x icon-3d"></i></a>
+          <a href="https://www.facebook.com/csikjsomaiya/" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-facebook fa-4x icon-3d"></i></a>
+          <a href="https://www.instagram.com/csikjsce/?hl=en" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-instagram fa-4x icon-3d"></i></a>
+          <a href="https://github.com/CSI-KJSCE" target="_blank" rel="noopener noreferrer"><i
+              class="fa fa-github fa-4x icon-3d"></i></a>
+
+        </div>
+        <style>
+          .flex-center {
+            width: 100%;
+            /* min-height: 50vh; */
+
+            /* background: #320A68; */
+
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+          }
+
+          @media (max-width:750px) {
+            .fa-4x {
+              font-size: 35px;
+            }
+          }
+
+          .icon-3d {
+            padding: 10px;
+            color: #fff;
+          }
+
+          .icon-3d:hover {
+            -webkit-animation: icon3d 500ms infinite;
+            animation: icon3d 500ms infinite;
+          }
+
+
+          @keyframes icon3d {
+            0% {
+              text-shadow: 5px 0px rgba(244, 67, 54, 1), -5px 0px rgba(33, 150, 243, 1);
+            }
+
+            25% {
+              text-shadow: -5px 0px rgba(244, 67, 54, 1), 5px 0px rgba(33, 150, 243, 1);
+            }
+
+            50% {
+              text-shadow: 5px 0px rgba(244, 67, 54, 1), -8px 0px rgba(33, 150, 243, 1);
+            }
+
+            75% {
+              text-shadow: -8px 0px rgba(244, 67, 54, 1), -5px 0px rgba(33, 150, 243, 1);
+            }
+
+            100% {
+              text-shadow: -5px 0 rgba(244, 67, 54, 1), 5px 0px rgba(33, 150, 243, 1);
+            }
+          }
+
+          .fa {
+            color: white;
+          }
+        </style>
+      </div>
+    </article>
+  </article>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+
+    // function to change navbar color when scrolling
+    $(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 5) {
+          $("#navbar").addClass('changeColor')
+          //console.log($('#navbar').css('background-color'))
+        }
+        if ($(this).scrollTop() < 5) {
+          $('#navbar').removeClass('changeColor')
+          // console.log($('#navbar').css('background-color'))
+        }
+      });
+    });
+  </script>
+  <script>
+
+
+    // document.getElementById('bg-video').play();
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+  </script>
+  <script>
+    var sat = true;
+    let inner_color = "#1e88e5";
+    let text_color = "#fff";
+    $("#satbtn").css("border-color", inner_color);
+    $("#satbtn").css("background", inner_color);
+    $("#satbtn").css("color", text_color);
+    $("#satbtn").css("outline-style", "none");
+    $("#sunbtn").css("outline-style", "none");
+    $("#satbtn").click(function () {
+      if (sat == false) {
+        $("#sunday").css("display", "none");
+        sat = true;
+        $("#saturday").css("display", "table-row-group");
+        // $("#satbtn").css("background", "transparent");
+        $("#satbtn").css("border-color", inner_color);
+        $("#satbtn").css("background", inner_color);
+        $("#satbtn").css("color", text_color);
+        // $("#satbtn").css("outline-style", "none");
+
+        $("#sunbtn").css("background", "transparent");
+        $("#sunbtn").css("border-color", "#ffffff");
+      }
+    });
+
+    $("#sunbtn").click(function () {
+      if (sat == true) {
+        $("#saturday").css("display", "none");
+        sat = false;
+        $("#sunday").css("display", "table-row-group");
+        $("#sunbtn").css("background", inner_color);
+        $("#sunbtn").css("border-color", inner_color);
+        $("#sunbtn").css("color", text_color);
+
+        $("#satbtn").css("border-color", "#ffffff");
+        $("#satbtn").css("background", "transparent");
+
+      }
+
+    });
+
+
+
+  </script>
+
+  <script>
+    $("#about-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#about").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#domains-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#domains").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+<script>
+  $("#preevent-nav").click(function () {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#pre-event").offset().top
+    }, 1300);
+    return false;
+  });
+</script>
+
+  <script>
+    $("#schedule-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#schedule").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#faq-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#faq").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#map-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#map").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#register-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#registration").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#schedule-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#schedule").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+
+  <script>
+    $("#sponsors-nav").click(function () {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#sponsors").offset().top
+      }, 1300);
+      return false;
+    });
+  </script>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/countdowntime/moment.min.js"></script>
+  <script src="vendor/countdowntime/moment-timezone.min.js"></script>
+  <script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+  <script>
+    $('.cd100').countdown100({
+      /*Set Endtime here*/
+      /*Endtime must be > current time*/
+      endtimeYear: 0,
+      endtimeMonth: 0,
+      endtimeDate: 35,
+      endtimeHours: 18,
+      endtimeMinutes: 0,
+      endtimeSeconds: 0,
+      timeZone: ""
+      // ex:  timeZone: "America/New_York"
+      //go to " http://momentjs.com/timezone/ " to get timezone
+    });
+  </script>
+  <!--===============================================================================================-->
+  <script src="vendor/tilt/tilt.jquery.min.js"></script>
+  <script>
+    $('.js-tilt').tilt({
+      scale: 1.1
+    })
+
+  </script>
+  <!--===============================================================================================-->
+  <script src="js/main2.js"></script>
+  <script src="https://apply.devfolio.co/v2/sdk.js"></script>
+  <script src="js/rocket.js"></script>
+  
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.4/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+</html>

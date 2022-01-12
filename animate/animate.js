@@ -2,21 +2,30 @@
 // DOM selectors
 const stars = document.getElementById('stars');
 const starsCtx = stars.getContext('2d');
-const slider = document.querySelector(".slider input");
-const output = document.querySelector("#speed");
+const slider = document.querySelector(".slider");
+document.body.style.zoom = 1.0
+var scale = 'scale(1)';
+document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+document.body.style.msTransform =   scale;       // IE 9
+document.body.style.transform = scale;     // General
 
 // global variables
-let screen, starsElements, starsParams = { speed: 2, number: 300, extinction: 4 };
+let screen, starsElements, starsParams = { speed: 2, number: 650, extinction: 4 };
 
 // run stars
 setupStars();
 updateStars();
 
 // handle slider
-output.innerHTML = slider.value;
-slider.oninput = function() {
-    output.innerHTML = this.value;
-    starsParams.speed = this.value;
+
+slider.onmouseover = function() {
+    console.log("mouse")
+    starsParams.speed = 20;
+};
+
+slider.onmouseout = function() {
+    console.log("Not hovering")
+    starsParams.speed = 4;
 };
 
 // update stars on resize to keep them centered
@@ -48,7 +57,7 @@ function Star() {
 
         starsCtx.beginPath();
         starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
-        starsCtx.arc(x, y, rad, 0, Math.PI * 2);
+        starsCtx.arc(x, y, rad-0.2, 0, Math.PI * 2);
         starsCtx.fill();
     }
 }
@@ -71,11 +80,12 @@ function setupStars() {
 
 // redraw the frame
 function updateStars() {
-    starsCtx.fillStyle = "black";
+    starsCtx.fillStyle = "#07031a";
     starsCtx.fillRect(0, 0, stars.width, stars.height);
     starsElements.forEach(function (s) {
         s.show();
         s.move();
     });
+
     window.requestAnimationFrame(updateStars);
 }
