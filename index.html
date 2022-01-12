@@ -662,9 +662,17 @@
 
 
     <section id = 'time_line'>
-      <header>
-        <h1>Vertical Timeline</h1>
-      </header>
+ 
+<!-- 
+      <div class="section-title">
+        <h3 class="title"><span style="color: white">Schedule</span></h3>
+      </div>
+      
+      <div class="schedule-navbar">
+        <button class="toggle-buttons active" id="7th-button" onclick="day1()">7th Jan</button>
+        <button class="toggle-buttons" id="8th-button" onclick="day2()">8th Jan</button>
+        <button class="toggle-buttons" id="9th-button" onclick="day3()">9th Jan</button>
+      </div> -->
       
       <section id="status-timeline" class="status-container", style="background-color: rgb(39,46,72); padding: 20px;  border-color: rgb(64,123,255); border-radius: 20px; border-width: 2px; border-style: solid;  box-shadow: 0px 0px 10px 0px #0ff;" >
         <div class="status-timeline-block">
@@ -672,96 +680,126 @@
       <!-- 			<img src="img/status-icon-picture.svg" alt="Picture"> -->
           </div> <!-- status-timeline-img -->
       
-          <div class="status-timeline-content">
-            <h2>February 8th, 2016</h2>
-      <!-- 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p> -->
-            <ul>
-              <li><strike>Drink water</strike></li>
-              <li><strike>Go for a walk</strike></li>
-              <li><strike>Apply to an open position</strike></li>
-            </ul>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Jan 14</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-movie">
-      <!-- 			<img src="img/status-icon-movie.svg" alt="Movie"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content">
-            <h2>Title of section 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Jan 18</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-picture">
-      <!-- 			<img src="img/status-icon-picture.svg" alt="Picture"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content">
-            <h2>Title of section 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Jan 24</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-location">
-      <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content">
-            <h2>Title of section 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Feb 14</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-location">
-      <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content", style="color: #290a5c;">
-            <h2>Title of section 5</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Feb 18</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
 
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-location">
-      <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content">
-            <h2>Title of section 5</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-            <a href="#0" class="status-read-more">Read more</a>
-            <span class="status-date">Feb 18</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
-      
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-movie">
-      <!-- 			<img src="img/status-icon-movie.svg" alt="Movie"> -->
-          </div> <!-- status-timeline-img -->
-      
-          <div class="status-timeline-content">
-            <h2>Final Section</h2>
-            <p>This is the content of the last section</p>
-            <span class="status-date">Feb 26</span>
-          </div> <!-- status-timeline-content -->
-        </div> <!-- status-timeline-block -->
+
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
+                    <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
+
+                    <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
+
+
+                    <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
+
+                    <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
+                    <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+          <div class="status-timeline-block">
+            <div class="status-timeline-img status-location">
+        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+            </div> <!-- status-timeline-img -->
+        
+            <div class="status-timeline-content", style="color: #252525;">
+              <h2>Title of section 5</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+              <a href="#0" class="status-read-more">Read more</a>
+              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
+            </div> <!-- status-timeline-content -->
+          </div> <!-- status-timeline-block -->
+          <!---------------------------------------------------------------------->
+          <!---------------------------------------------------------------------->
+
+
+
       </section> <!-- status-timeline -->
     </section>
 
