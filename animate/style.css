@@ -18,6 +18,9 @@ body, html {
     width: 100%;
     margin-bottom: 5px;
 }
+#onload-show-header{
+    display:none;
+}
 .header-title-div img{
     position: fixed;
     top: 7%;
@@ -27,6 +30,7 @@ body, html {
     font-family: sans-serif;
     text-align: right;
 }
+
 .header-title-div p{
     position: fixed;
     top: 12%;

@@ -1,5 +1,34 @@
 
 // DOM selectors
+function SubmitForm(){
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var subject = document.getElementById('subject').value;
+    var msg = document.getElementById('message').value;
+
+    const data={
+        name:name,
+        email:email,
+        subject:subject,
+        message:msg
+    };
+    console.log(data);
+    if(name.length!=0 && email.length!=0 && subject.length!=0){
+        fetch("https://shreeconsultant.herokuapp.com/submit", {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify(data)
+        }).then(res => {
+            document.getElementById("the_truth_value").style.display = "block";
+            console.log("Request complete! response:", res);
+        });
+    }
+    
+};
+window.onload = function () {
+    document.getElementById("onload-show-header").style.display = "block";
+};
+
 const stars = document.getElementById('stars');
 const starsCtx = stars.getContext('2d');
 const slider = document.querySelector(".slider");
