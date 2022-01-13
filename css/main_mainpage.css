@@ -1412,7 +1412,7 @@ body {
   font-size: 30px;
 }
 .navbar-custom{
-  box-shadow: inset -7px -8px 20px 3px ;
+  box-shadow: inset 2px -2px 20spx 3px ;
   background: inherit;
   backdrop-filter: blur(10px);
 }

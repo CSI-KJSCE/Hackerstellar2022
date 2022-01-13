@@ -25,9 +25,9 @@
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main_mainpage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
@@ -199,7 +199,7 @@
 
     <div class="container">
 
-      <a class="navbar-brand" href="https://csikjsce.org/index.html" target="_blank" rel="noopener noreferrer">
+      <a class="navbar-brand" href="index.html" target="_blank" rel="noopener noreferrer">
         <div class="logo-image">
           <img src="img/CSIlogo.png" class="img-fluid">
         </div>
@@ -213,17 +213,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto w-100 justify-content-end ">
           <li class="nav-item navbar-text">
-            <a class="nav-link" href="#" id="about-nav" style="opacity: 1;">About</a>
+            <a class="nav-link" href="#about" id="about-nav" style="opacity: 1;">About</a>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="domains-nav" style="opacity: 1;">Domains</a>
+            <a class="nav-link" href="#domains" id="domains-nav" style="opacity: 1;">Tracks</a>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="preevent-nav" style="opacity: 1;">Pre-Events</a>
+            <a class="nav-link" href="#faqs" id="faq-nav" style="opacity: 1;">FAQ</a>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="faq-nav" style="opacity: 1;">FAQ</a>
+            <a class="nav-link" href="#contact" id="map-nav" style="opacity: 1;">Contact</a>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="map-nav" style="opacity: 1;">Map</a>
+            <a class="nav-link" href="#timeline" id="domains-nav" style="opacity: 1;">Timeline</a>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="sponsors-nav" style="opacity: 1;">Sponsors</a>
+            <a class="nav-link" href="#sponser" id="sponsors-nav" style="opacity: 1;">Sponsors</a>
           </li>
         </ul>
       </div>
@@ -234,15 +234,15 @@
 
   <article>
     <div class="containercsi">
-      <canvas id="stars">
+      <canvas id="stars" width="40%">
       </canvas>
       <div class="header-title-div" id="onload-show-header">
         <img src="img/hackerstellar.png" alt="Hackerstellar"></img>
         <p>Aspire to Innovate</p>
 
         <div class="custom_dates_header"> 
-            <h3>27<sup>th</sup> - 28<sup>th</sup> February 2022</h3>
-            <span>Last date of registration : 5<sup>th</sup> Feb 2022</span>
+            <h3>26<sup>th</sup> - 27<sup>th</sup> February 2022</h3>
+            <span>Last date of registration : 15<sup>th</sup> Feb 2022</span>
         </div>
 
         <div class="Registeration_button">
@@ -253,6 +253,10 @@
                 <img src="img/discors.png" alt="Discord"></img>
             </div>
         </div>
+      </div>
+
+      <div class="astronaut_image">
+        <img src="img/Astronaut.png" alt=""></img>
       </div>
     </div>
   </article>
@@ -378,10 +382,10 @@
         }
       </style>
       <div class="container">
-        <div class="heading" style="text-align: center; margin-top: 3%;">
-          <h1 style="font-size:xx-large">Registerations have been closed. Thank You for registering!</h1>
+        <div class="heading" style="text-align: center; margin-top:5px;">
+          <h1 style="font-size:xx-large">Registerations closes in ...</h1>
         </div>
-        <!-- <div class="card" style=" margin:0 auto;">
+        <div class="card" style=" margin:0 auto;">
           <div class="card-block h350"
             style="height: 200px; border-top-left-radius: 30px; border-top-right-radius: 30px;text-align: center;padding: 53px;display: flex;flex-wrap: nowrap;">
             <div class="flex-col-c-m wsize2 m-b-20" style="display: inline-block;">
@@ -414,10 +418,10 @@
               <span class="m2-txt2" style="font-family: fibra_light;display: inline-block;">Seconds</span>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
-      <!-- <script>
-        var registration_end_date = new Date("Feb 24, 2021 23:59:59").getTime();
+      <script>
+        var registration_end_date = new Date("Feb 15, 2022 23:59:59").getTime();
         var x = setInterval(function () {
           var now = new Date().getTime();
           var difference = registration_end_date - now;
@@ -438,7 +442,7 @@
           document.getElementById("countminutes").innerHTML = minutes;
           document.getElementById("countseconds").innerHTML = seconds;
         });
-      </script> -->
+      </script>
       <br><br>
       <div class="container" id="about">
         <div class="hackitbox">
@@ -447,7 +451,7 @@
             <h1> What is HackerStellar?</h1>
 
             <p style="text-align: justify; opacity: 1;">Computer Society of India - a students' chapter of the K.J.
-              Somaiya College of Engineering proudly introduces HackerBash, as a part of our annual flagship council
+              Somaiya College of Engineering proudly introduces HackerStellar, as a part of our annual flagship council
               tech event called TechNext. For an incredible 24 hours, you will work together with your teams to envision
               and develop the technology of tomorrow for solving the problems of today. It is a plethora of
               opportunities for tech savvies to boost their skills, capitalize on tech trends, both new and old, and get
@@ -456,14 +460,14 @@
               before? No? Don’t worry, this is exactly what we’re here for! It's time to #beginyourhack!</p>
             <p
               style="text-align: justify; opacity: 1; box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; padding: 15px; font-size: x-large;">
-              Since this will be an event for the tyros, we would highly recommend people who've previously attended a
-              few hackathons to defer from applying since we will be going through your profiles and skillset.</p>
+               Everyone with or without technical background are welcomed to put forward thier own ideas to the Problem Statements.This event is also begineer friendly , so newbies are encouraged to join the event :-)
+              </p>
           </div>
         </div>
     </section>
 
     <!-- DOMAINS -->
-    <section id="domains" class="domains reg-gradient">
+    <section id="domains" class="domains reg-gradient" style="padding-bottom: 0rem;">
       <style>
         #domains .row {
           width: 80%;
@@ -572,7 +576,7 @@
         }
       </style>
       <div class="heading text-center">
-        <h1 style="margin: 2% 0;">Domains</h1>
+        <h1 style="margin: 2% 0;">Tracks</h1>
         <!-- <div class="row align-items-center justify-content-center row-eq-height" style="margin: 2% 0;">
           
       </div> -->
@@ -583,9 +587,9 @@
                 <img src="./img/ai-ml.png" alt="" class="segment-img">
               </div>
               <div class="card-block h350" style="height: 200px;">
-                <h1 class="prize-card-title">AI/ML</h1>
+                <h1 class="prize-card-title">Sustaniability</h1>
                 <p style="padding: 0 3% 3% 3%;">
-                  For those wanting to break free from reality and get create something new
+                  For those who prefer to make change and development
                 </p>
               </div>
               <!-- <p class="view-more"><a target="_blank"
@@ -601,7 +605,7 @@
               <div class="card-block h350" style="height: 200px;">
                 <h1 class="prize-card-title">Education</h1>
                 <p style="padding: 0 3% 3% 3%;">
-                  For those who want to make the abc's a reality for all
+                  For those who want to make basic education for all
                 </p>
               </div>
               <!-- <p class="view-more"><a target="_blank"
@@ -612,28 +616,12 @@
           <div class="col-lg-4">
             <div class="card">
               <div class="segment-img-container">
-                <img src="./img/webapp.png" alt="" class="segment-img">
+                <img src="./img/recreation.png" alt="" class="segment-img" style="height:40%; width: 40%;margin-left: 32%;">
               </div>
               <div class="card-block h350" style="height: 200px;">
-                <h1 class="prize-card-title">App Dev</h1>
+                <h1 class="prize-card-title">Recreation</h1>
                 <p style="padding: 0 3% 3% 3%;">
-                  For those who like to unlock a plethora of opportunities with a touch on your screens
-                </p>
-              </div>
-              <!-- <p class="view-more"><a target="_blank"
-                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
-                More <i class="fa fa-external-link"></i></a></p> -->
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card">
-              <div class="segment-img-container">
-                <img src="./img/web.png" alt="" class="segment-img">
-              </div>
-              <div class="card-block h350" style="height: 200px;">
-                <h1 class="prize-card-title">Web Dev</h1>
-                <p style="padding: 0 3% 3% 3%;">
-                  For those wanting to get hooked to the vast web
+                  A bit fun and recreation is always mandatory in CSI
                 </p>
               </div>
               <!-- <p class="view-more"><a target="_blank"
@@ -647,7 +635,7 @@
                 <img src="./img/fintech.png" alt="" class="segment-img">
               </div>
               <div class="card-block h350" style="height: 200px;">
-                <h1 class="prize-card-title">Financial Technology</h1>
+                <h1 class="prize-card-title">Finance</h1>
                 <p style="padding: 0 3% 3% 3%;">
                   For the currency ambitious, who want to connect cash with tech
                 </p>
@@ -665,7 +653,7 @@
               <div class="card-block h350" style="height: 200px;">
                 <h1 class="prize-card-title">Health</h1>
                 <p style="padding: 0 3% 3% 3%;">
-                  With the wrath of 2020 that the pandemic served us, this is for those who want to prioritize a healthy
+                  This is for those who want to prioritize a healthy
                   living
                 </p>
               </div>
@@ -674,31 +662,29 @@
                 More <i class="fa fa-external-link"></i></a></p> -->
             </div>
           </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="segment-img-container">
+                <img src="./img/idea.png" alt="" class="segment-img">
+              </div>
+              <div class="card-block h350" style="height: 200px;">
+                <h1 class="prize-card-title">Wildcart</h1>
+                <p style="padding: 0 3% 3% 3%;">
+                  Bring your own ideas to the table!
+                </p>
+              </div>
+              <!-- <p class="view-more"><a target="_blank"
+                href="https://www.notion.so/Matic-Network-Devfolio-Hackathon-Season-Prize-de8961d5eeff4780963749da0b75037c">View
+                More <i class="fa fa-external-link"></i></a></p> -->
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
 
-    <ul id="countdown">
-      <li id="days">
-        <div class="number">00</div>
-        <div class="label">Days</div>
-      </li>
-      <li id="hours">
-        <div class="number">00</div>
-        <div class="label">Hours</div>
-      </li>
-      <li id="minutes">
-        <div class="number">00</div>
-        <div class="label">Minutes</div>
-      </li>
-      <li id="seconds">
-        <div class="number">00</div>
-        <div class="label">Seconds</div>
-      </li>
-    </ul>
-
-    <section id = 'time_line'>
- 
+      <h1 style="margin: 1% 0; justify-self: center;text-align: center;" id="timeline">Expected Timeline</h1>
+      <p style="text-align: center;">We will be updating timeline to display all the hackathon events</p>
 <!-- 
       <div class="section-title">
         <h3 class="title"><span style="color: white">Schedule</span></h3>
@@ -710,134 +696,148 @@
         <button class="toggle-buttons" id="9th-button" onclick="day3()">9th Jan</button>
       </div> -->
       
-      <section id="status-timeline" class="status-container", style="background-color: rgb(39,46,72); padding: 20px;  border-color: rgb(64,123,255); border-radius: 20px; border-width: 2px; border-style: solid;  box-shadow: 0px 0px 10px 0px #0ff;" >
-        <div class="status-timeline-block">
-          <div class="status-timeline-img status-picture">
-      <!-- 			<img src="img/status-icon-picture.svg" alt="Picture"> -->
-          </div> <!-- status-timeline-img -->
-      
-
-
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
+      <section id = 'time_line'>
+ 
+        <!-- 
+              <div class="section-title">
+                <h3 class="title"><span style="color: white">Schedule</span></h3>
+              </div>
+              
+              <div class="schedule-navbar">
+                <button class="toggle-buttons active" id="7th-button" onclick="day1()">7th Jan</button>
+                <button class="toggle-buttons" id="8th-button" onclick="day2()">8th Jan</button>
+                <button class="toggle-buttons" id="9th-button" onclick="day3()">9th Jan</button>
+              </div> -->
+              
+              <section id="status-timeline" class="status-container", style="background-color: rgb(39,46,72); padding: 0px 20px 50px 20px;  border-color: rgb(64,123,255); border-radius: 20px; border-width: 2px; border-style: solid;  box-shadow: 0px 0px 10px 0px #0ff;" >
+                <div class="status-timeline-block">
+                  <div class="status-timeline-img status-picture">
+              <!-- 			<img src="img/status-icon-picture.svg" alt="Picture"> -->
+                  </div> <!-- status-timeline-img -->
+              
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-                    <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-
-                    <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+                  <div class="status-timeline-block">
+                    <div class="status-timeline-img status-location">
+                <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+                    </div> <!-- status-timeline-img -->
+                
+                    <div class="status-timeline-content", style="color: #252525;">
+                      <h2 style="font-size : 20px; font-weight: 900;">Problem statement Reveal</h2>
+                      <p></p>
+                      <!-- <a href="#0" class="status-read-more">Read more</a> -->
+                      <span class="status-date"style="color: #A0A0A0; font-size : 20px;font-weight: 900; padding: 20px 10px;">3rd week of Feb</span>
+                    </div> <!-- status-timeline-content -->
+                  </div> <!-- status-timeline-block -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-
-
-                    <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-
-                    <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-                    <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-          <div class="status-timeline-block">
-            <div class="status-timeline-img status-location">
-        <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
-            </div> <!-- status-timeline-img -->
+         
         
-            <div class="status-timeline-content", style="color: #252525;">
-              <h2>Title of section 5</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-              <a href="#0" class="status-read-more">Read more</a>
-              <span class="status-date"style="color: #A0A0A0;">Feb 18</span>
-            </div> <!-- status-timeline-content -->
-          </div> <!-- status-timeline-block -->
-          <!---------------------------------------------------------------------->
-          <!---------------------------------------------------------------------->
-
-
-
-      </section> <!-- status-timeline -->
-    </section>
+        
+        
+        
+          
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+                  <div class="status-timeline-block">
+                    <div class="status-timeline-img status-location">
+                <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+                    </div> <!-- status-timeline-img -->
+                
+                    <div class="status-timeline-content", style="color: #252525;">
+                      <h2 style="font-size : 20px; font-weight: 900;">Sponsors Reveal</h2>
+                      <p></p>
+                      <!-- <a href="#0" class="status-read-more">Read more</a> -->
+                      <span class="status-date"style="color: #A0A0A0; font-size : 20px;font-weight: 900; padding: 20px 10px;">4th week of Feb</span>
+                    </div> <!-- status-timeline-content -->
+                  </div> <!-- status-timeline-block -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+        
+        
+        
+        
+        
+        
+                            <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+                  <div class="status-timeline-block">
+                    <div class="status-timeline-img status-location">
+                <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+                    </div> <!-- status-timeline-img -->
+                
+                    <div class="status-timeline-content", style="color: #252525;">
+                      <h2 style="font-size : 20px; font-weight: 900;">Pre Events Announcements</h2>
+                      <p></p>
+                      <!-- <a href="#0" class="status-read-more">Read more</a> -->
+                      <span class="status-date"style="color: #A0A0A0; font-size : 20px;font-weight: 900; padding: 20px 10px;">3rd week of March</span>
+                    </div> <!-- status-timeline-content -->
+                  </div> <!-- status-timeline-block -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+        
+        
+        
+        
+        
+        
+        
+        
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+                  <div class="status-timeline-block">
+                    <div class="status-timeline-img status-location">
+                <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+                    </div> <!-- status-timeline-img -->
+                
+                    <div class="status-timeline-content", style="color: #252525;">
+                      <h2 style="font-size : 20px; font-weight: 900;">HackerStellar Hackathon 🥳</h2>
+                      <p></p>
+                      <!-- <a href="#0" class="status-read-more">Read more</a> -->
+                      <span class="status-date"style="color: #A0A0A0; font-size : 20px;font-weight: 900; padding: 20px 10px;">26-27 March</span>
+                    </div> <!-- status-timeline-content -->
+                  </div> <!-- status-timeline-block -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+        
+        
+        
+        
+        
+        
+        
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+                  <div class="status-timeline-block">
+                    <div class="status-timeline-img status-location">
+                <!-- 			<img src="img/status-icon-location.svg" alt="Location"> -->
+                    </div> <!-- status-timeline-img -->
+                
+                    <div class="status-timeline-content", style="color: #252525;">
+                      <h2 style="font-size : 20px; font-weight: 900;">Post Event Survey and functions</h2>
+                      <p></p>
+                      <!-- <a href="#0" class="status-read-more">Read more</a> -->
+                      <span class="status-date"style="color: #A0A0A0; font-size : 20px;font-weight: 900; padding: 20px 10px;">28th March Onwards</span>
+                    </div> <!-- status-timeline-content -->
+                  </div> <!-- status-timeline-block -->
+                  <!---------------------------------------------------------------------->
+                  <!---------------------------------------------------------------------->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+              </section> <!-- status-timeline -->
+            </section>
 
     <section id="prize_head">
       <div class="container">
@@ -845,7 +845,7 @@
           <h1 style="font-size: 40px;">Prizes</h1>
         </div>
         <div class="heading text-center">
-          <span class="worth" style="font-size: 20px;">Worth <span id="amount">&#8377 1,58,000</span></span>
+          <span class="worth" style="font-size: 20px;">Worth <span id="amount">&#8377 1,00,000</span></span>
         </div>
       </div>
     </section>
@@ -1001,14 +1001,14 @@
             <div class="segment-img-container">
               <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
             </div>
-            <div class="card-block h350" style="text-align: center; height: 320px;">
+            <div class="card-block h350" style="text-align: center; height: 200px;">
               <h1 class="prize-card-title">First Prize</h1>
               <ul>
                 <li>
-                  <h1>Prizes worth <em>&#8377 34,650</em></h1>
+                  <h1>Prizes worth <em>&#8377 50,000</em></h1>
                 </li>
-                <li>&#8226; 90% discount on any Coding Blocks course worth &#8377 16,650</li>
-                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,500</li>
+                <!-- <li>&#8226; 90% discount on any Coding Blocks course worth &#8377 16,650</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,500</li> -->
               </ul>
             </div>
           </div>
@@ -1019,14 +1019,14 @@
             <div class="segment-img-container">
               <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
             </div>
-            <div class="card-block h350" style="text-align: center; height: 320px;">
+            <div class="card-block h350" style="text-align: center; height: 200px;">
               <h1 class="prize-card-title">Second Prize</h1>
               <ul>
                 <li>
-                  <h1>Prizes worth <em>&#8377 32,800</em></h1>
+                  <h1>Prizes worth <em>&#8377 30,000</em></h1>
                 </li>
-                <li>&#8226; 80% discount on any Coding Blocks course worth &#8377 14,800</li>
-                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li>
+                <!-- <li>&#8226; 80% discount on any Coding Blocks course worth &#8377 14,800</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li> -->
               </ul>
             </div>
           </div>
@@ -1037,19 +1037,19 @@
             <div class="segment-img-container">
               <img src="./img/icons8-trophy-96.png" alt="" class="segment-img">
             </div>
-            <div class="card-block h350" style="text-align: center; height: 320px;">
+            <div class="card-block h350" style="text-align: center; height: 200px;">
               <h1 class="prize-card-title">Third Prize</h1>
               <ul>
                 <li>
-                  <h1>Prizes worth <em>&#8377 30,850</em></h1>
+                  <h1>Prizes worth <em>&#8377 15,000</em></h1>
                 </li>
-                <li>&#8226; 70% discount on any Coding Blocks course worth &#8377 12,850</li>
-                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li>
+                <!-- <li>&#8226; 70% discount on any Coding Blocks course worth &#8377 12,850</li>
+                <li>&#8226; 4 free exam vouchers of SYBGEN worth &#8377 18,000</li> -->
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
           <div class="card">
             <img src="./img/matic_card.png" alt="" class="card-img-top">
             <div class="segment-img-container">
@@ -1069,8 +1069,8 @@
                 rel="noopener noreferrer">View
                 More <i class="fa fa-external-link"></i></a></p>
           </div>
-        </div>
-        <div class="col-lg-4">
+        </div> -->
+        <!-- <div class="col-lg-4">
           <div class="card">
             <img src="./img/portis_card.png" alt="" class="card-img-top">
             <div class="segment-img-container">
@@ -1087,8 +1087,8 @@
                 rel="noopener noreferrer">View
                 More <i class="fa fa-external-link"></i></a></p>
           </div>
-        </div>
-        <div class="col-lg-4">
+        </div> -->
+        <!-- <div class="col-lg-4">
           <div class="card">
             <img src="./img/tezos_card.png" alt="" class="card-img-top">
             <div class="segment-img-container">
@@ -1106,10 +1106,11 @@
                 rel="noopener noreferrer">View
                 More <i class="fa fa-external-link"></i></a></p>
           </div>
-        </div>
+        </div> -->
+        <p style="text-align: right;">..... And many more to be announced soon</p>
       </div>
     </div>
-
+<!-- 
     <div id="pre-event">
       <style>
         #pre-event .row {
@@ -1223,14 +1224,13 @@
         }
       </style>
       <div class="heading text-center">
-        <h1 style="margin: 2% 0;">Pre-Events</h1>
+        <h1 style="margin: 2% 0;">Pre-Events</h1> -->
         <!-- <div class="row align-items-center justify-content-center row-eq-height" style="margin: 2% 0;">
           
       </div> -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-lg-6">
           <div class="card">
-            <!-- <img src="./img/matic_card.png" alt="" class="card-img-top"> -->
             <div class="card-block h350">
               <h1 class="prize-card-title">Trusting Artificial Intelligence with Finance</h1>
               <div class="row" style="margin-top: 0; border: 3px solid #ff5733; border-radius: 20px;">
@@ -1265,7 +1265,6 @@
         </div>
         <div class="col-lg-6">
           <div class="card">
-            <!-- <img src="./img/matic_card.png" alt="" class="card-img-top"> -->
             <div class="card-block h350">
               <h1 class="prize-card-title">Making phone selfies into powerful diagnostic tools</h1>
               <div class="row" style="margin-top: 0; border: 3px solid #ff5733; border-radius: 20px;">
@@ -1300,10 +1299,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <br><br>
-    <section id="faq" class="faq">
+    <section id="faqs" class="faq" style=" border-color: rgb(64,123,255); border-radius: 20px; border-width: 2px; border-style: solid;  
+      box-shadow: 0px 0px 10px 0px #0ff;margin: 15px;
+    ">
       <div class="container">
         <div class="heading text-center">
           <h1>Frequently Asked Questions</h1>
@@ -1351,7 +1352,7 @@
             </div>
 
             <div class="accordion">
-              <h4>Who can attend HackerBash?</h4>
+              <h4>Who can attend HackerStellar?</h4>
               <h4>+</h4>
             </div>
             <div class="panel"
@@ -1364,13 +1365,13 @@
             </div>
 
             <div class="accordion">
-              <h4>How much does it cost to attend HackerBash?</h4>
+              <h4>How much does it cost to attend HackerStellar?</h4>
               <h4>+</h4>
             </div>
             <div class="panel"
               style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
               <p style="margin: 3%; opacity: 1;">
-                HackerBash is free for all participants, thanks to our amazing sponsors!
+                Hackerstellar is free for all participants, thanks to our amazing sponsors!
               </p>
             </div>
           </div>
@@ -1384,7 +1385,7 @@
             <div class="panel"
               style="box-shadow: 4px 4px 4px 0 #e1d1fa, 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #290a5c; text-align: center;">
               <p style="margin: 3%; opacity: 1;">
-                HackerBash is going to be completely virtual! Schedule and details of the event will be updated here
+                HackerStellar is going to be completely virtual! Schedule and details of the event will be updated here
                 soon.
               </p>
             </div>
@@ -1478,7 +1479,7 @@
         </div>
       </div>
     </section> -->
-    <section class="ftco-section" style="background-color: transparent">
+    <section class="ftco-section" style="background-color: transparent" id="contact">
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-12">
@@ -1543,122 +1544,24 @@
       </div>
   </section>
 
-    <article class="sponsors-gradient">
+    <article class="sponsors-gradient" id="sponser">
       <section id="sponsors" class="sponsors">
 
         <div class="container text-center">
-          <h1>Sponsors</h1>
+          <h1 style="margin-bottom: 0;margin-top: 35px;">Sponsors</h1>
+          <div style="text-align: center;">
+            <img src="img/robots.png" height="40%"></img>
+          </div>
+          <div style="margin-top: 10px;">
+            <p>Please be patient for our Sponser reveal</p>
+            <p style="cursor: pointer; text-decoration: underline;"><a href="past_sponsers.html" target="_blank">Till then,please give a look at past sponsers <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+          </div>
           <br>
-
-          <div class="accordion">
-            <h1>Co-Sponsor</h1>
-          </div>
-          <div class="panel">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://devfolio.co"><img class="sponsors-image" src="img/devfolio.svg"
-                      title="Devfolio"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="accordion">
-            <h1>Associate Sponsors</h1>
-          </div>
-          <div class="panel">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://www.portis.io/"><img class="sponsors-img"
-                      src="./img/Portis_Logo-White@2x.png" title="Portis"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://matic.network/"><img class="sponsors-img" src="img/matic.png"
-                      title="Matic"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://tezos.com/"><img class="sponsors-img"
-                      src="img/Tezos_Logo-White@2x.png" title="Tezos"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://balsamiq.com/"><img class="sponsor-img"
-                      src="img/balsamiq-logo-screen.svg" title="Balsamiq"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://codingblocks.com/"><img class="sponsor-img" src="./img/cb_white.png"
-                      title="Coding Blocks"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://repl.it/"><img class="sponsor-img" src="./img/repl_spon.png"
-                      title="ReplIt"></a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="accordion">
-            <h1>Education Sponsor</h1>
-          </div>
-          <div class="panel">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://SYBGEN.com/"><img class="sponsor-img"
-                      src="./img/SPOILER_SYBGEN_LOGO.jpg" title="SYBGEN"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion">
-            <h1>Media Sponsor</h1>
-          </div>
-          <div class="panel">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://edubard.in/"><img class="sponsor-img" src="./img/edubard_sponpng.png"
-                      title="Edubard"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion">
-            <h1>Certification Sponsor</h1>
-          </div>
-          <div class="panel">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-4">
-                <div class="sponsor sponsor-img">
-                  <a target="_blank" href="https://givemycertificate.com/index.php"><img class="sponsor-img"
-                      src="./img/GMC_sponpng.png" title="Give My Certificate"></a>
-                </div>
-              </div>
-            </div>
-          </div>
           <!-- Sponsor Contact -->
           <div class="last-bar"> </div>
           <div class="caption">
-            <h1 style="margin-bottom: 1%;">Interested in sponsoring HackerBash 2021?</h1>
-            <h2>Reach us at<a target="_blank" href="mailto:csi-kjsce@somaiya.edu"
+            <h1 style="margin-bottom: 1%;">Interested in sponsoring Hackerstellar 2022?</h1>
+            <h2>Reach us at <a target="_blank" href="mailto:csi-kjsce@somaiya.edu"
                 style="color: #ff5733;">csi-kjsce@somaiya.edu</a></h2>
 
             <a href="brochure/Hackerstellar-2022.pdf" download="Hackerstellar2022.pdf" target="_blank">
@@ -1765,7 +1668,7 @@
     </article>
   </article>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script>
 
     // function to change navbar color when scrolling
@@ -1929,7 +1832,8 @@
       return false;
     });
   </script>
-  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+  <script src="js/time.js"></script>
   <!--===============================================================================================-->
   <script src="vendor/bootstrap/js/popper.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -1956,7 +1860,7 @@
     });
   </script>
   <!--===============================================================================================-->
-  <script src="vendor/tilt/tilt.jquery.min.js"></script>
+  <!-- <script src="vendor/tilt/tilt.jquery.min.js"></script> -->
   <script>
     $('.js-tilt').tilt({
       scale: 1.1

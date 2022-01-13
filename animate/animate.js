@@ -31,12 +31,16 @@ window.onload = function () {
 
 const stars = document.getElementById('stars');
 const starsCtx = stars.getContext('2d');
-const slider = document.querySelector(".slider");
+const slider = document.querySelector(".Registeration_button");
 document.body.style.zoom = 1.0
 var scale = 'scale(1)';
 document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
 document.body.style.msTransform =   scale;       // IE 9
 document.body.style.transform = scale;     // General
+
+
+var canvas = document.getElementsByTagName('canvas')[0];
+canvas.height = 600;
 
 // global variables
 let screen, starsElements, starsParams = { speed: 2, number: 650, extinction: 4 };
@@ -95,7 +99,7 @@ function Star() {
 function setupStars() {
     screen = {
         w: window.innerWidth,
-        h: window.innerHeight,
+        h: 700,
         c: [ window.innerWidth * 0.5, window.innerHeight * 0.5 ]
     };
     window.cancelAnimationFrame(updateStars);

@@ -13,17 +13,6 @@ var sec;
 /* --------------------------
  * ON DOCUMENT LOAD
  * -------------------------- */
-$(function() {
-   // Calculate time until launch date
-   timeToLaunch();
-  // Transition the current countdown from 0 
-  numberTransition('#days .number', days, 1000, 'easeOutQuad');
-  numberTransition('#hours .number', hrs, 1000, 'easeOutQuad');
-  numberTransition('#minutes .number', min, 1000, 'easeOutQuad');
-  numberTransition('#seconds .number', sec, 1000, 'easeOutQuad');
-  // Begin Countdown
-  setTimeout(countDownTimer,1001);
-});
 
 /* --------------------------
  * FIGURE OUT THE AMOUNT OF 
@@ -86,3 +75,12 @@ function numberTransition(id, endPoint, transitionDuration, transitionEase){
       }
    }); 
 };
+
+timeToLaunch();
+// Transition the current countdown from 0 
+numberTransition('#days .number', days, 1000, 'easeOutQuad');
+numberTransition('#hours .number', hrs, 1000, 'easeOutQuad');
+numberTransition('#minutes .number', min, 1000, 'easeOutQuad');
+numberTransition('#seconds .number', sec, 1000, 'easeOutQuad');
+// Begin Countdown
+setTimeout(countDownTimer,1001);
