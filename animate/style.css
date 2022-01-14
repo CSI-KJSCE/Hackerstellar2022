@@ -105,6 +105,10 @@ body, html {
     right:0;
     width:600px;
 }
+.astronaut_image{
+    margin-bottom: -60px;
+}
+
 
 @media (max-width: 768px) {
         
@@ -188,5 +192,11 @@ body, html {
         top:28%;
         right:10%;
         width:300px;
+        margin-bottom: 0;
+    }
+
+
+    .astronaut_image{
+        margin-bottom: 0;
     }
 }
