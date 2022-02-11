@@ -97,11 +97,16 @@ function Star() {
 
 // setup <canvas>, create all the starts
 function setupStars() {
+    console.log(window.innerWidth);
+    
     screen = {
         w: window.innerWidth,
         h: 700,
         c: [ window.innerWidth * 0.5, window.innerHeight * 0.5 ]
     };
+    if(window.innerWidth > 700 && window.innerWidth <1000){
+        screen.h = 450
+    }
     window.cancelAnimationFrame(updateStars);
     stars.width = screen.w;
     stars.height = screen.h;

@@ -110,7 +110,7 @@ body, html {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 699px) {
         
     .header-title-div img{
         position: fixed;
@@ -192,6 +192,96 @@ body, html {
         top:28%;
         right:10%;
         width:300px;
+        margin-bottom: 0;
+    }
+
+
+    .astronaut_image{
+        margin-bottom: 0;
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 1000px){
+    .header-title-div img{
+        position: fixed;
+        top: 7%;
+        width: 45%;
+        margin-left: 20px;
+        color: white;
+        font-family: sans-serif;
+        text-align: right;
+    }
+
+    .header-title-div p{
+        position: fixed;
+        top: 11%;
+        left:12%;
+        margin-left: 20px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        text-align: right;
+        font-size:17px;
+    }
+        
+    .discord_logo img{
+        position: fixed;
+        top: 21%;
+        left:165px;
+        height: 50px;
+        width:50px;
+        margin-left: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+        
+    .custom_dates_header h3{
+        position: fixed;
+        top: 15%;
+        text-align: left;
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-size:large;
+        font-size:18px;
+        letter-spacing: 1.7px;
+        font-weight: bolder;
+        padding-left: 40px;
+    }
+
+    .custom_dates_header span{
+        position: fixed;
+        top: 17%;
+        left: 5%;
+        color: white;
+        font-family: 'Lato', sans-serif;
+        font-size:200;
+        text-align:center;
+        font-size:15px;
+        letter-spacing: 1.7px;
+    }
+        
+    .slider{
+        position: fixed;
+        top: 21%;
+        left:65px;
+        width: 140px;
+        border-radius: 10px;
+        color:white;
+        background-color:#0b4ec9;
+        font-size: 17px;
+        justify-content:center;
+        text-align:center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 500;
+        font-family: 'Lato', sans-serif;
+        cursor: pointer;
+    }
+    .astronaut_image img{
+        position: fixed;
+        top:13%;
+        right:1%;
+        width:350px;
         margin-bottom: 0;
     }
 

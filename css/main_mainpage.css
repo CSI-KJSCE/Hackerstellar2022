@@ -291,7 +291,7 @@ img.hero-stars {
 
 .last-bar {
   border-bottom: 3px solid transparent;
-  border-image: linear-gradient(to right,#FF5733, #FFC300);
+  border-image: linear-gradient(to right, rgba(0,0,0,0) 0%, #f29c38 20%, #ea3329 40%, #ff034a 60%, #0C8CFE 80%, rgba(0,0,0,0) 100%);
   border-image-slice: 1;
   padding: 25px; }
 
@@ -518,13 +518,13 @@ article.hero {
 
 article.body {
   color: #ffffff;
-  background-color: #1A063A;
+  background-color: #080F24;
   padding-bottom: 0rem;
   position: relative;
   z-index: 5;
   font-size: 1.8rem; }
   article.body section.dono-story {
-    background-color: #1A063A;
+    background-color: #080F24;
     color: #ffffff;
     padding-bottom: 3rem; }
     @media (min-width: 767.98px) {
@@ -1080,7 +1080,7 @@ section.sched {
       margin-bottom: 9rem; } }
 
 article.contact {
-  background-color: #1A063A;
+  background-color: #080F24;
   /* background: -webkit-linear-gradient(to bottom,  #201e5c, #3d54a5);
   /* Chrome 10-25, Safari 5.1-6 */
   /*background: linear-gradient(to bottom, #201e5c, #3d54a5); */
@@ -1364,7 +1364,7 @@ article.footer {
   width:100%;
 }
 .hackitbox{
-  background: linear-gradient(#030119 0%, #00172c 90%,#1A063A 100%);
+  background: linear-gradient(#030119 0%, #03072e 90%,#080F24 100%);
 }
 
 
@@ -1462,7 +1462,7 @@ body {
     article.body section.domains {
       /*DOMAINS*/
       padding-top: 0rem;
-      background-color: #1A063A;
+      background-color: #080F24;
       /* background: -webkit-linear-gradient(to bottom, #201e5c, #201e5c);      /*Themes Gradient*/
       /* Chrome 10-25, Safari 5.1-6 */
       /*background: linear-gradient(to bottom, #201e5c, #201e5c); */
@@ -1683,7 +1683,7 @@ body {
         margin-left: -5%; }
     article.body section.sponsors {
       /*SPONSERS*/
-      background-color: #1A063A;
+      background-color: #080F24;
       /* background: -webkit-linear-gradient(to bottom, #3d54a5, #201e5c);
       /* Chrome 10-25, Safari 5.1-6 */
       /* background: linear-gradient(to bottom, #3d54a5, #201e5c); */
